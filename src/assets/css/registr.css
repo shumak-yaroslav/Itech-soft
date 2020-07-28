@@ -1,0 +1,250 @@
+body{background: #E5E5E5;}
+
+body {
+    margin: 0px;
+    padding: 0;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+    height: 949px;
+  }
+
+#Address {
+    margin-top: 20px;
+}
+
+#text_form {
+    margin-top: 30px;
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height */
+
+
+color: #434349;
+}
+
+.reg{
+    position: absolute;
+    width: 1295px;
+    height: 880px;
+    margin: 30px;
+    left: 29.5%;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+#sign{
+    position: absolute;
+    left: 640px;
+    transform: translate(-50%, 0);
+    top: 10px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 36px;
+text-align: center;
+/* identical to box height */
+
+
+color: #434349;
+}
+
+#check {
+    margin-top: 100px;
+    left: 37%;
+    position: absolute;
+}
+
+#sign1{
+    position: absolute;
+    left: 640px;
+    transform: translate(-50%, 0);
+    top: 40px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;
+}
+
+.fields{
+    position: absolute;
+      width: 461px;
+      height: 491px;
+      left: 270px;
+      top: 150px;
+}
+
+#fields {
+    display: none;
+}
+
+#field1 {
+    display: none;
+}
+
+.field1{
+    position: absolute;
+      width: 461px;
+      height: 491px;
+      left: 680px;
+      top: 150px;
+}
+
+input{
+    border: 1px solid #E2E5EC;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 335px;
+    height: 40px;
+    margin-top: 15px;
+    padding-left: 10px ;
+  }
+  .btn{
+    margin-top: 270px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #3758FF;
+}
+
+.btn1{
+    margin-top: 550px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #3758FF;
+    left: 37%;
+    position: absolute;
+}
+
+
+.btn2{
+    margin-top: 170px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #3758FF;
+    position: absolute;
+    left: -210px;
+
+}
+
+
+#first {
+    transform:scale(0.5);
+    margin-left: -150px;
+    position: absolute;
+    margin-top: 90px;
+}
+
+#first_label {
+    display: inline-block;
+    margin-left: 495px;
+    margin-top: 100px;
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+}
+
+#second_label {
+    display: inline-block;
+    margin-left: 40px;
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+}
+
+#second {
+    transform:scale(0.5);
+    margin-left: -150px;
+    position: absolute;
+    margin-top: 90px;
+}
+
+
+.left_toolbar {
+    background-color: #1E1E2D;
+    margin: 0px;
+  }
+  
+  #logo {
+    margin-top: 50px;
+    margin-left: 30%;
+  }
+  
+  #group {
+    margin-top: 200px;
+    margin-left: 15%;
+  }
+
+
+    #Address1 {
+    margin-top: 15px;
+    }
+    .field2 {
+        position: absolute;
+        width: 461px;
+        height: 491px;
+        left: 270px;
+        top: 150px;
+    display: none;
+    }
+    .field3 {
+        position: absolute;
+        width: 461px;
+        height: 491px;
+        left: 680px;
+        top: 150px;
+    display: none;
+    }
+    input {
+    border: 1px solid #e2e5ec;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 335px;
+    height: 40px;
+    margin-top: 15px;
+    padding-left: 10px;
+    }
+    #Address1 {
+    height: 120px;
+    }
+    .btn {
+    width: 335px;
+    height: 50px;
+    border-radius: 4px;
+    margin-top: 230px;
+    font-size: 16px;
+    color: #ffffff;
+    background: #3758ff;
+    }
+
+#btn2 {
+    margin-top: 105px;
+}
