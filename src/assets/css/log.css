@@ -35,6 +35,21 @@ body {
     line-height: 36px;
     /* identical to box height */
     color: #434349;  }
+
+    #word1{
+      position: absolute;
+      width: 200px;
+      height: 36px;
+      left: 190px;
+      top: 100px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 36px;
+      /* identical to box height */
+      color: #434349;  }
+
     #subscr{
         position: absolute;
         width: 175px;
@@ -51,6 +66,50 @@ body {
         
         color: #646C9A;
     }
+
+    #subscr1{
+      position: absolute;
+      width: 175px;
+      height: 48px;
+      left: 210px;
+      top: 150px;
+      
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      
+      
+      color: #646C9A;
+  }
+
+  #subscr2{
+    position: absolute;
+    width: 175px;
+    height: 48px;
+    left: 210px;
+    top: 150px;
+    display: none;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    
+    
+    color: #646C9A;
+}
+
+#Password1 {
+    display: none;
+}
+
+#Password2 {
+  display: none;
+}
+
 #sign_up{
     position: absolute;
     width: 196px;
@@ -75,6 +134,15 @@ body {
       left: 115px;
       top: 190px;
   }
+
+  .fields1{
+    position: absolute;
+    width: 561px;
+    height: 491px;
+    left: 115px;
+    top: 200px;
+}
+
   input{
     border: 1px solid #E2E5EC;
     box-sizing: border-box;
@@ -91,6 +159,15 @@ body {
       color: #FFFFFF;
       background: #3758FF;
   }
+
+  #btn1{
+    margin-top: 40px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #3758FF;
+    display: none;
+}
+
   .psw{
       position: absolute;
     left: 240px;
