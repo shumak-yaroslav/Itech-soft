@@ -1,13 +1,15 @@
-let obj = {};
 localStorage.setItem('login','0');
+let obj = {};
 let val = [];
+let val_1 =[];
+val_2 =[];
 let l1,l2,l3,l4,l5;
-let val_1 = [];
-let val_2 = [];
-let user;
 let keys = ["username","password"];
 let key = ["username"];
 let key_1 = ["password"];
+let user;
+
+let find_id;
 (async function loadData() {
     let url = 'http://51.68.195.202:3000/users';
     let response = await fetch(url);
@@ -35,7 +37,12 @@ function chekLog(){
     );
     
     console.log(result);
-    
+    for (let value of Object.values(result[0])) {
+        find_id = value;
+        break;
+      }
+      console.log(find_id);
+      localStorage.setItem('id',find_id);
     if(result.length == 0) {
     localStorage.setItem('login','0');
     alert("Incorrect data entered!")
@@ -43,52 +50,73 @@ function chekLog(){
     localStorage.setItem('login','1');
     goToPage();
     }
-
+    
     var user=getCookie("username");
-        if (user != "") {
-            alert("Welcome again " + user);
-        } else {
-            user = l1;
-           if (user != "" && user != null) {
-               setCookie("username", user, 30);
-           }
-        }
+    if (user != "") {
+    alert("Welcome again " + user);
+    } else {
+    user = l1;
+    if (user != "" && user != null) {
+    setCookie("username", user, 30);
+    }
+    }
     
     
     }
-
+    
     function setCookie(cname,cvalue,exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-        var expires = "expires=" + d.toGMTString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
     
     function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+    c = c.substring(1);
     }
-
-    
-    
-
-
-
+    if (c.indexOf(name) == 0) {
+    return c.substring(name.length, c.length);
+    }
+    }
+    return "";
+    }
 
 function goToPage()
 {
 	document.location.href = "http://127.0.0.1:5500/index.html";
+}
+
+
+
+function changePsw(){
+    let findObj = {};
+    l3 = document.getElementById("Username_psw").value;
+    val_1.push(l3);
+    for (let i = 0; i <= key.length -1; i++) {
+        findObj[keys[i]] = val_1[i];
+    }
+    console.log(findObj); 
+
+    const result = obj.filter(some => 
+        Object.keys(findObj).every(key => 
+          some[key] === findObj[key])
+      );
+
+      console.log(result);
+
+      user = l3;
+
+      if(result.length == 0) {
+          alert("Incorrect data entered!")
+      }else{
+          changeForm();
+      }
 }
 
 function changeForm() {
@@ -99,7 +127,7 @@ function changeForm() {
     let Username_psw = document.getElementById('Username_psw');
     let btn1 = document.getElementById('btn1');
     let btn = document.getElementById('btn')
-
+    
     subscr1.style.display = "none";
     subscr2.style.display = "inline";
     Password1.style.display = "inline";
@@ -107,68 +135,45 @@ function changeForm() {
     Username_psw.style.display = "none";
     btn.style.display = "none";
     btn1.style.display = "inline";
-}
+    }
 
-function changePsw(){
+function changePassword(){
     let findObj = {};
-    l3 = document.getElementById("Username_psw").value;
-    val_1.push(l3);
-    for (let i = 0; i <= key.length -1; i++) {
-    findObj[keys[i]] = val_1[i];
-    }
-    console.log(findObj);
-    
-    const result = obj.filter(some =>
-    Object.keys(findObj).every(key =>
-    some[key] === findObj[key])
-    );
-    
-    console.log(result);
+    let l4 = document.getElementById('Password1').value;
+    let l5 = document.getElementById('Password2').value;
 
-    user = l3;
-    
-    if(result.length == 0) {
-    alert("Incorrect data entered!")
-    }else{
-    changeForm();
-    }
-    }
-
-    function changePassword(){
-        let findObj = {};
-        let l4 = document.getElementById('Password1').value;
-        let l5 = document.getElementById('Password2').value;
-        
-        if(l4 !== l5){
+    if(l4 !== l5){
         alert("Error with repeat password!!")
-        }else{
+    }else{
         val_2.push(l4);
         for (let i = 0; i <= key_1.length -1; i++) {
-        findObj[key_1[i]] = val_2[i];
+            findObj[key_1[i]] = val_2[i];
         }
-        console.log(findObj);
-        
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        
-        var raw = JSON.stringify([findObj]);
-        
-        var requestOptions = {
-        method: 'PATCH',
-        headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
-        };
-        
-        fetch(`http://51.68.195.202:3000/users?username=eq.${user}`, requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .then(goToLog())
-        .catch(error => console.log('error', error));
-        }
-        }
+        console.log(findObj); 
 
-        function goToLog()
-        {
-            document.location.href = "http://127.0.0.1:5500/log.html";
-        }
+
+        var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify([findObj]);
+
+var requestOptions = {
+  method: 'PATCH',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch(`http://51.68.195.202:3000/users?username=eq.${user}`, requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error))
+  .then(goToLog());
+    }
+}
+
+
+function goToLog()
+{
+	document.location.href = "http://127.0.0.1:5500/log.html";
+}
