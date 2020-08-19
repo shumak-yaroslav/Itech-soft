@@ -229,7 +229,7 @@
                         <div data-v-901c34fe="" class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url(&quot;/src/assets/media/misc/bg-1.jpg&quot;);">
                           <div data-v-901c34fe="" class="kt-user-card__avatar"><img data-v-901c34fe="" alt="Pic" src="/src/assets/media/users/300_25.jpg" class="kt-hidden"> <span data-v-901c34fe="" class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success"></span></div>
                           <div data-v-901c34fe="" class="kt-user-card__name kt-font-dark text-white" style="color: rgb(255, 255, 255) !important;">
-  
+
                           </div>
                         </div>
                         <div data-v-901c34fe="" class="kt-notification">
@@ -290,62 +290,62 @@
                                 <div id="N11" class="tabcontent">
                                     <div class="first">
                                         <p>App Key</p><br>
-                                        <input type="text" id="app_key"><br>
+                                        <input type="text" v-model="app_key" id="app_key"><br>
                                         <p>App Secret</p><br>
-                                        <input type="text" id="app_secret"><br>
+                                        <input type="text" v-model="app_secret" id="app_secret"><br>
                                     </div>
                                         <div class="second">
                                             <p>Api Username</p><br>
-                                            <input type="text" id="api_username"><br>
+                                            <input type="text" v-model="api_username" id="api_username"><br>
                                             <p>Api Password</p><br>
-                                            <input type="password" id="api_password"><br>
-                                        </div> 
+                                            <input type="password" v-model="api_password" id="api_password"><br>
+                                        </div>
                                   </div>
                                   <div id="Trendyal" class="tabcontent">
-                                    <div class="first">
-                                        <p>App Key</p><br>
-                                        <input type="text" id="app_key1"><br>
-                                        <p>App Secret</p><br>
-                                        <input type="text" id="app_secret1"><br>
-                                    </div>
+                                        <div class="first">
+                                            <p>App Key</p><br>
+                                            <input type="text" v-model="app_key1" id="app_key1"><br>
+                                            <p>App Secret</p><br>
+                                            <input type="text" v-model="app_secret1" id="app_secret1"><br>
+                                        </div>
                                         <div class="second">
                                             <p>Api Username</p><br>
-                                            <input type="text" id="api_username1"><br>
+                                            <input type="text" v-model="api_username1" id="api_username1"><br>
                                             <p>Api Password</p><br>
-                                            <input type="password" id="api_password1"><br>
-                                        </div> 
+                                            <input type="password" v-model="api_password1" id="api_password1"><br>
+                                        </div>
                                   </div>
                                   <div id="Hepsiburada" class="tabcontent">
-                                    <div class="first">
-                                        <p>App Key</p><br>
-                                        <input type="text" id="app_key2"><br>
-                                        <p>App Secret</p><br>
-                                        <input type="text" id="app_secret2"><br>
-                                    </div>
+                                        <div class="first">
+                                            <p>App Key</p><br>
+                                            <input type="text" v-model="app_key2" id="app_key2"><br>
+                                            <p>App Secret</p><br>
+                                            <input type="text" v-model="app_secret2" id="app_secret2"><br>
+                                        </div>
                                         <div class="second">
                                             <p>Api Username</p><br>
-                                            <input type="text" id="api_username2"><br>
+                                            <input type="text" v-model="api_username2" id="api_username2"><br>
                                             <p>Api Password</p><br>
-                                            <input type="password" id="api_password2"><br>
-                                        </div> 
+                                            <input type="password" v-model="api_password2" id="api_password2"><br>
+                                        </div>
                                   </div>
                                   <div id="Gittigidiyor" class="tabcontent">
-                                    <div class="first">
-                                        <p>App Key</p><br>
-                                        <input type="text" id="app_key3"><br>
-                                        <p>App Secret</p><br>
-                                        <input type="text" id="app_secret3"><br>
-                                    </div>
+                                        <div class="first">
+                                            <p>App Key</p><br>
+                                            <input type="text" v-model="app_key3" id="app_key3"><br>
+                                            <p>App Secret</p><br>
+                                            <input type="text" v-model="app_secret3" id="app_secret3"><br>
+                                        </div>
                                         <div class="second">
                                             <p>Api Username</p><br>
-                                            <input type="text" id="api_username3"><br>
+                                            <input type="text" v-model="api_username3" id="api_username3"><br>
                                             <p>Api Password</p><br>
-                                            <input type="password" id="api_password3"><br>
-                                        </div> 
+                                            <input type="password" v-model="api_password3" id="api_password3"><br>
+                                        </div>
                                 </div>
                                 <div class="btns" id="btns">
                                     <input class="btn1" id="btn1" type="button" value="Save" onclick="postApi()">
-                                    <input class="btn2" id="btn2" type="button" value="Cansel" onclick="">  
+                                    <input class="btn2" id="btn2" type="button" value="Cansel" onclick="">
                                 </div>
                             </div>
                                 <div data-v-60a8d82a="" class="col-md-4 kt-margin-b-20-tablet-and-mobile"></div>
@@ -705,7 +705,7 @@
         <div id="kt_scrolltop" class="kt-scrolltop"><i class="fa fa-arrow-up"></i></div>
       </div>
     </div>
-  
+
     <!-- begin::Global Config(global config for global JS sciprts) -->
     <script>
       var KTAppOptions = {
@@ -738,7 +738,7 @@
       };
     </script>
     <!-- end::Global Config -->
-  
+
     <script type="text/javascript">
       function loadFile(filename, filetype) {
         filename = filename + "?time=" + Date.now();
@@ -756,47 +756,47 @@
           document.getElementsByTagName("head")[0].appendChild(fileref);
       }
     </script>
-  
+
     <!--begin::Global Theme Bundle(used by all pages) -->
     <script src="/src/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
     <script src="/src/assets/js/scripts.bundle.js" type="text/javascript"></script>
     <!--end::Global Theme Bundle -->
-  
+
     <!--begin::Page Vendors(used by this page) -->
     <script src="/src/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
     <script src="//maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
     <script src="/src/assets/plugins/custom/gmaps/gmaps.js" type="text/javascript"></script>
     <!--end::Page Vendors -->
-  
+
     <!--begin::Custom Page -->
     <!--end::Custom Page -->
-  
+
     <!--begin::Page Scripts(used by this page) -->
-  
+
     <!-- Custom Functions -->
     <script src="/src/assets/js/sprintf.min.js" type="text/javascript"></script>
     <script src="/src/assets/js/custom/lang/tr/global.js" type="text/javascript"></script>
     <script src="/src/assets/js/custom/global.js" type="text/javascript"></script>
     <script src="/src/assets/js/custom/app.js" type="text/javascript"></script>
-  
+
     <!-- Dashboard Page -->
     <script src="/src/assets/js/pages/dashboard.js" type="text/javascript"></script>
-  
+
     <!-- Login Page -->
     <script src="/src/assets/js/pages/custom/login/login-general.js" type="text/javascript"></script>
-  
+
     <!--Build -->
     <script src="/dist/build.js" type="text/javascript"></script>
     <!--<script type="text/javascript">loadjscssfile("/dist/build.js", "js");</script>-->
-  
+
     <!-- One Signal -->
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-  
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-153396545-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-  
+
       function gtag() {
         dataLayer.push(arguments);
       }
@@ -804,7 +804,7 @@
       gtag('config', 'UA-153396545-1');
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-  
+
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
@@ -820,7 +820,7 @@
       })();
     </script>
     <!--End of Tawk.to Script-->
-  
+
     <!-- B24 -->
     <!-- B24 -->
     <!--end::Page Scripts -->
@@ -862,7 +862,7 @@
       // ]]>
     </script> --&gt;
     <!-- end::Body -->
-  
+
     <div id="iLABH71-1592487454551" class="" style="display: block !important;">
       <iframe id="lGk8l7y-1592487454551" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; box-shadow: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; top: auto !important; right: auto !important; bottom: auto !important; left: auto !important; position: static !important; border: 0px !important; min-height: auto !important; min-width: auto !important; max-height: none !important; max-width: none !important; padding: 0px !important; margin: 0px !important; transition-property: none !important; transform: none !important; width: 350px !important; z-index: 999999 !important; cursor: auto !important; float: none !important; border-radius: unset !important; pointer-events: auto !important; display: none !important; height: 120px !important;"></iframe>
       <iframe id="GqfnXkc-1592487454551" src="about:blank" frameborder="0" scrolling="no" title="chat widget" class="" style="outline: none !important; visibility: visible !important; resize: none !important; overflow: visible !important; background: none transparent !important; opacity: 1 !important; position: fixed !important; border: 0px !important; padding: 0px !important; transition-property: none !important; z-index: 1000001 !important; cursor: auto !important; float: none !important; pointer-events: auto !important; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 10px 0px !important; height: 60px !important; min-height: 60px !important; max-height: 60px !important; width: 60px !important; min-width: 60px !important; max-width: 60px !important; border-radius: 50% !important; transform: rotate(0deg) translateZ(0px) !important; transform-origin: 0px center !important; margin: 0px !important; top: auto !important; bottom: 20px !important; right: 20px !important; left: auto !important; display: block !important;"></iframe>
@@ -901,6 +901,7 @@
 document.getElementById("defaultOpen").click();
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="enter.js"></script>
     <script src="api.js"></script>
   </body>

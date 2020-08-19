@@ -16,18 +16,18 @@ let api_obg;
     let response = await fetch(url);
     let commits = await response.json(); // читаем ответ в формате JSON
     api_obg = commits;
-    console.log(api_obg);   
+    console.log(api_obg);
 }());
 
 function postApi(){
-    
+
     arr_api.push(id_user,marketplace);
     for(let i=0;i<=api_obg.length-1;i++){
         let get_arr = [];
         for (let value of Object.values(api_obg[i])) {
             get_arr.push(value);
             console.log(get_arr);
-            
+
         }
         if(arr_api[0] == get_arr[1] && arr_api[1] == get_arr[2]){
             console.log("match");
@@ -39,10 +39,10 @@ function postApi(){
     if(ok === false){
         insertMarketplace();
     }
-    
-    
-      
-    
+
+
+
+
 }
 
 
@@ -65,7 +65,7 @@ function updateMarketplace(){
     if(app_key3 != ""){
         arr_api2.push(app_key3);
     }
-    
+
 
     let app_secret = document.getElementById('app_secret').value;
     let app_secret1 = document.getElementById('app_secret1').value;
@@ -83,8 +83,8 @@ function updateMarketplace(){
     if(app_secret3 != ""){
         arr_api2.push(app_secret3);
     }
-    
-   
+
+
 
     let api_username = document.getElementById('api_username').value;
     let api_username1 = document.getElementById('api_username1').value;
@@ -102,7 +102,7 @@ function updateMarketplace(){
     if(api_username3 != ""){
         arr_api2.push(api_username3);
     }
-    
+
 
     let api_password = document.getElementById('api_password').value;
     let api_password1 = document.getElementById('api_password1').value;
@@ -126,20 +126,20 @@ function updateMarketplace(){
     for (let i = 0; i <= keys_api2.length -1; i++) {
         findObj[keys_api2[i]] = arr_api2[i];
     }
-    console.log(findObj); 
+    console.log(findObj);
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    
+
     var raw = JSON.stringify([findObj]);
-    
+
     var requestOptions = {
       method: 'PATCH',
       headers: myHeaders,
       body: raw,
       redirect: 'follow'
     };
-    
+
     fetch(`http://51.68.195.202:3000/users_api?user_id=eq.${id_user}&marketplace=eq.${marketplace}`, requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
@@ -164,7 +164,7 @@ function insertMarketplace(){
     if(app_key3 != ""){
         arr_api.push(app_key3);
     }
-    
+
 
     let app_secret = document.getElementById('app_secret').value;
     let app_secret1 = document.getElementById('app_secret1').value;
@@ -182,8 +182,8 @@ function insertMarketplace(){
     if(app_secret3 != ""){
         arr_api.push(app_secret3);
     }
-    
-   
+
+
 
     let api_username = document.getElementById('api_username').value;
     let api_username1 = document.getElementById('api_username1').value;
@@ -201,7 +201,7 @@ function insertMarketplace(){
     if(api_username3 != ""){
         arr_api.push(api_username3);
     }
-    
+
 
     let api_password = document.getElementById('api_password').value;
     let api_password1 = document.getElementById('api_password1').value;
@@ -219,14 +219,14 @@ function insertMarketplace(){
     if(api_password3 != ""){
         arr_api.push(api_password3);
     }
-   
+
     console.log(arr_api);
 
     for (let i = 0; i <= keys_api.length -1; i++) {
-          obj[keys_api[i]] = arr_api[i]; 
-        
+          obj[keys_api[i]] = arr_api[i];
+
       }
-  
+
       console.log(obj);
 
 
@@ -247,3 +247,46 @@ fetch("http://51.68.195.202:3000/users_api", requestOptions)
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 }
+
+var N11 = new Vue ({
+    el: '#N11',
+    data: {
+      app_key: '',
+      app_secret: '',
+      api_username: '',
+      api_password: '',
+    }
+  })
+
+  var Trendyal = new Vue ({
+    el: '#Trendyal',
+    data: {
+      app_key1: '',
+      app_secret1: '',
+      api_username1: '',
+      api_password1: '',
+    }
+  })
+
+  var Hepsiburada = new Vue ({
+    el: '#Hepsiburada',
+    data: {
+      app_key2: '',
+      app_secret2: '',
+      api_username2: '',
+      api_password2: '',
+    }
+  })
+
+
+  var Gittigidiyor = new Vue ({
+    el: '#Gittigidiyor',
+    data: {
+      app_key3: '',
+      app_secret3: '',
+      api_username3: '',
+      api_password3: '',
+    }
+  })
+
+

@@ -24,8 +24,8 @@ function update(){
     l4 = document.getElementById('Phone_number').value; //
     l5 = document.getElementById('Company_title').value;
     l6 = document.getElementById('Company_type').value; //
-    
-    l7 = document.getElementById('Company_register_number').value; 
+
+    l7 = document.getElementById('Company_register_number').value;
 
     l8 = document.getElementById('Kep_address').value;
     l9 = document.getElementById('Tax_office_city').value;
@@ -51,7 +51,7 @@ function update(){
     }
 
     console.log(findObj);
-    
+
     for(let i =0;i<get_users.length;i++){
         let findId;
         for (let value of Object.values(get_users[i])) {
@@ -60,27 +60,55 @@ function update(){
             if(findId = id_user){
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
-                
+
                 var raw = JSON.stringify([findObj]);
-                
+
                 var requestOptions = {
                   method: 'PATCH',
                   headers: myHeaders,
                   body: raw,
                   redirect: 'follow'
                 };
-                
+
                 fetch(`http://51.68.195.202:3000/users?id=eq.${id_user}`, requestOptions)
                   .then(response => response.text())
                   .then(result => console.log(result))
                   .catch(error => console.log('error', error));
-            
+
             }
             break;
         }
     }
-
-    
-       
-
 }
+
+
+
+var company_informations = new Vue ({
+    el: '#company_informations',
+    data: {
+      username: '',
+      password: '',
+      email: '',
+      phone_number: '',
+      membership_type: '',
+      company_title: '',
+      company_type: '',
+      company_register_number: '',
+      kep_address: '',
+      tax_office_city: '',
+        tax_office: '',
+        tax_number: '',
+        name_surname: '',
+        title_of_person: '',
+        local_no: '',
+        mobile_no: '',
+        fax: '',
+        address1: '',
+        gsm: '',
+        email1: '',
+    }
+  })
+
+
+
+
