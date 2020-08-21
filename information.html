@@ -279,7 +279,7 @@
                   <div data-v-60a8d82a="" class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
                     <div data-v-60a8d82a="" class="kt-portlet kt-portlet--mobile">
                       <div data-v-60a8d82a="" class="">
-                        <div data-v-60a8d82a="" class="kt-margin-b-150">
+                        <div data-v-60a8d82a="" class="kt-margin-b-50">
                                 <div data-v-60a8d82a="" class="api">
                                     <div class="tab">
                                         <button class="tablink" id="user_informations1" onclick="openPage('user_informations', this)">User informations</button>
@@ -303,207 +303,208 @@
                                             <p id="user_info4"><img id="mail" src="/src/assets/images/plus.png" alt="plus"> not confirmed</p>
                                         </div>
                                   </div>
-                                  <div id="company_informations" class="tabcontent2">
+                                  <div id="up_info">
+                                    <div id="company_informations" class="tabcontent2">
                                       <div class="first1">
-                                        <p id="input_text">Username:</p><br>
-                                        <input type="text" v-model="username" id="Username"><br>
-                                        <p id="input_text">Password:</p><br>
-                                        <input type="password" v-model="password" id="Password"><br>
-                                        <p id="input_text">Email:</p><br>
-                                        <input type="email" v-model="email" id="Email"><br>
-                                        <p id="input_text">Phone_number:</p><br>
-                                        <input type="text" v-model="phone_number" id="Phone number"><br>
-                                        <p id="input_text">Membership type:</p><br>
-                                        <input type="text" v-model="membership_type" id="Membership_type"><br>
-                                        <p id="input_text">Company title:</p><br>
-                                        <input type="password" v-model="company_title" id="Company_title"><br>
-                                        <p id="input_text">Company type:</p><br>
-                                        <input type="email" v-model="company_type" id="Company_type"><br>
-                                        <p id="input_text">Company register number:</p><br>
-                                        <input type="text" v-model="company_register_number" id="Company_register_number"><br>
-                                        <p id="input_text">Kep Address:</p><br>
-                                        <input type="text" v-model="kep_address" id="Kep_address"><br>
+                                          <p id="input_text">Username:</p><br>
+                                          <input type="text" id="Username" v-model="Username"><br>
+                                          {{Username}}
+                                          <p id="input_text">Password:</p><br>
+                                          <input type="password" id="Password" v-model="Password"><br>
+                                          <p id="input_text">Email:</p><br>
+                                          <input type="email" id="Email" v-model="Email"><br>
+                                          <p id="input_text">Phone_number:</p><br>
+                                          <input type="text" id="Phone number" v-model="Phone"><br>
+                                          <p id="input_text">Membership type:</p><br>
+                                          <input type="text" id="Membership_type" v-model="Membership_type"><br>
+                                          <p id="input_text">Company title:</p><br>
+                                          <input type="password" id="Company_title" v-model="Company_title"><br>
+                                          <p id="input_text">Company type:</p><br>
+                                          <input type="email" id="Company_type" v-model="Company_type"><br>
+                                          <p id="input_text">Company register number:</p><br>
+                                          <input type="text" id="Company_register_number" v-model="Company_register_number"><br>
+                                          <p id="input_text">Kep Address:</p><br>
+                                          <input type="text" id="Kep_address" v-model="Kep_address"><br>
                                       </div>
-
-                                        <div class="second1">
-                                            <p id="input_text">Tax Office City:</p><br>
-                                            <input type="text" v-model="tax_office_city" id="Tax_office_city"><br>
-                                            <p id="input_text">Tax Office:</p><br>
-                                            <input type="password" v-model="tax_office" id="Tax_office"><br>
-                                            <p id="input_text">Tax number:</p><br>
-                                            <input type="email" v-model="tax_number" id="Tax_number"><br>
-                                            <p id="notinput_text">Signature officer</p><br>
-                                            <p id="input_text">Name surname:</p><br>
-                                            <input type="text" v-model="name_surname" id="Name_surname"><br>
-                                            <p id="input_text">Titile of person:</p><br>
-                                            <input type="text" v-model="title_of_person" id="Title_of_person"><br>
-                                            <p id="notinput_text">Company contact information</p><br>
-                                            <p id="input_text">Local no:</p><br>
-                                            <input type="password" v-model="local_no" id="Local_no"><br>
-                                            <p id="input_text">Mobile No</p><br>
-                                            <input type="email" v-model="mobile_no" id="Mobile_no"><br>
-                                        </div>
-
-                                        <div class="third1">
-                                            <p id="input text">Fax:</p><br>
-                                            <input id="Fax" v-model="fax" type="text"><br>
-                                            <p id="input text">Address:</p><br>
-                                            <textarea name="Address" v-model="address1" id="Address1" cols="21%" rows="4"></textarea>
-                                            <p id="notinput_text">Authorized contact information</p>
-                                            <p id="input text">GSM:</p><br>
-                                            <input id="GSM" v-model="gsm" type="text">
-                                            <p id="input text">Email:</p><br>
-                                            <input id="Email1" v-model="email1" type="emal">
+                                          <div class="second1">
+                                              <p id="input_text">Tax Office City:</p><br>
+                                              <input type="text" id="Tax_office_city" v-model="Tax_office_city"><br>
+                                              <p id="input_text">Tax Office:</p><br>
+                                              <input type="password" id="Tax_office" v-model="Tax_office"><br>
+                                              <p id="input_text">Tax number:</p><br>
+                                              <input type="email" id="Tax_number" v-model="Tax_number"><br>
+                                              <p id="notinput_text">Signature officer</p><br>
+                                              <p id="input_text">Name surname:</p><br>
+                                              <input type="text" id="Name_surname" v-model="Name_surname"><br>
+                                              <p id="input_text">Titile of person:</p><br>
+                                              <input type="text" id="Title_of_person" v-model="Title_of_person"><br>
+                                              <p id="notinput_text">Company contact information</p><br>
+                                              <p id="input_text">Local no:</p><br>
+                                              <input type="password" id="Local_no" v-model="Local_no"><br>
+                                              <p id="input_text">Mobile No</p><br>
+                                              <input type="email" id="Mobile_no" v-model="Mobile_no"><br>
+                                              </div>
+                                          <div class="third1">
+                                              <p id="input text">Fax:</p><br>
+                                              <input id="Fax" type="text" v-model="Fax"><br>
+                                              <p id="input text">Address:</p><br>
+                                              <textarea name="Address" v-model="address1" id="Address1" cols="21%" rows="4"></textarea>
+                                              <p id="notinput_text">Authorized contact information</p>
+                                              <p id="input text">GSM:</p><br>
+                                              <input id="GSM" v-model="GSM" type="text">
+                                              <p id="input text">Email:</p><br>
+                                              <input id="Email1" v-model="Email1" type="emal">
                                           </div>
-                                        <input type="button"  id="button1" value="Save" onclick="update()">
+                                          <input type="button"  id="button1" value="Save" @click="chekUsers">
+                                      </div>
+                                  </div>
+                                  <div id="payments" class="tabcontent2">
+                                    <div class="first3">
+                                      <p id="card">Your cards</p>
+                                      <div class="pay">
+                                        <img id="card1" src="/src/assets/images/image 7.png" alt="logo">
+                                        <p class="text_inside">Card number</p>
+                                        <p class="nums_inside">**** **** **** 2345</p>
+                                        <p class="text_inside2">Card holder name</p>
+                                        <p class="tex_inside">Name Surname</p>
+                                        <p class="text_inside1">Expiration date</p>
+                                        <p class="tex_inside1">10/2027</p>
                                     </div>
-                                    <div id="payments" class="tabcontent2">
-                                          <div class="first3">
-                                            <p id="card">Your cards</p>
-                                            <div class="pay">
-                                              <img id="card1" src="/src/assets/images/image 7.png" alt="logo">
-                                              <p class="text_inside">Card number</p>
-                                              <p class="nums_inside">**** **** **** 2345</p>
-                                              <p class="text_inside2">Card holder name</p>
-                                              <p class="tex_inside">Name Surname</p>
-                                              <p class="text_inside1">Expiration date</p>
-                                              <p class="tex_inside1">10/2027</p>
-                                          </div>
-                                          <p id="card_1">Payment history</p>
-                                          <div class="demo">
-                                            <ul class="hr">
-                                              <li id="block1">$65.00</li>
-                                               <li id="pending">Pending</li>
-                                                <li id="right1">May 10, 2020</li>
-                                                 <li id="fit">Visa 5432</li>
-                                            </ul>
-                                                <input type="checkbox" id="hd-1" class="hide"/>
-                                                <label id="hd-1-1" for="hd-1" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
-                                                <div>
-                                                  <div class="history">
-                                                    <div class="one">
-                                                      <div class="pay2">
-                                                          <p class="text_inside10">Card number</p>
-                                                          <p class="nums_inside10">**** **** **** 2345</p>
-                                                          <p class="text_inside20">Card holder name</p>
-                                                          <p class="tex_inside10">Name Surname</p>
-                                                          <img id="card1-1" src="/src/assets/images/image 7.png" alt="logo">
-                                                          <p class="text_inside11">Expiration date</p>
-                                                          <p class="tex_inside12">10/2027</p>
-                                                    </div>
+                                    <p id="card_1">Payment history</p>
+                                    <div class="demo">
+                                      <ul class="hr">
+                                        <li id="block1">$65.00</li>
+                                         <li id="pending">Pending</li>
+                                          <li id="right1">May 10, 2020</li>
+                                           <li id="fit">Visa 5432</li>
+                                      </ul>
+                                          <input type="checkbox" id="hd-1" class="hide"/>
+                                          <label id="hd-1-1" for="hd-1" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
+                                          <div>
+                                            <div class="history">
+                                              <div class="one">
+                                                <div class="pay2">
+                                                    <p class="text_inside10">Card number</p>
+                                                    <p class="nums_inside10">**** **** **** 2345</p>
+                                                    <p class="text_inside20">Card holder name</p>
+                                                    <p class="tex_inside10">Name Surname</p>
+                                                    <img id="card1-1" src="/src/assets/images/image 7.png" alt="logo">
+                                                    <p class="text_inside11">Expiration date</p>
+                                                    <p class="tex_inside12">10/2027</p>
+                                              </div>
 
-                                                    </div>
-                                                    <div class="two">
-                                                      <p class="ht">Status</p>
-                                                      <p class="ht-1">Pending</p>
-                                                      <p class="ht">ID number</p>
-                                                      <p class="ht-1">EKG2SJFN</p>
-                                                    </div>
-                                                    <div class="three">
-                                                      <p class="ht">Invoice date</p>
-                                                      <p class="ht-1">May 10, 2020</p>
-                                                      <p class="ht">Date paid</p>
-                                                      <p class="ht-1">May 10, 2020</p>
-                                                      <div class="vl"></div>
-                                                    </div>
-                                                    <div class="four">
-                                                      <p class="ht">Amount due</p>
-                                                      <p class="ht-2">$65</p>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <br/>
-                                                <br/>
-                                                <ul class="hr">
-                                                    <li id="block1">$250.00</li>
-                                                    <li id="completed1">Completed</li>
-                                                      <li id="right3">Apr 10, 2020</li>
-                                                      <li id="left">Visa 5432</li>
-                                            </ul>
-                                                <input type="checkbox" id="hd-2" class="hide"/>
-                                                <label id="hd-1-1" for="hd-2"><img src="/src/assets/images/arrow.png" alt="arrow"></label>
-                                                <div>
-                                                  <div class="history">
-                                                    <div class="one">
-                                                      <div class="pay3">
-                                                          <p class="text_inside10">Card number</p>
-                                                          <p class="nums_inside10">**** **** **** 2345</p>
-                                                          <p class="text_inside20">Card holder name</p>
-                                                          <p class="tex_inside10">Name Surname</p>
-                                                          <img id="card1-2" src="/src/assets/images/image 7.png" alt="logo">
-                                                          <p class="text_inside11">Expiration date</p>
-                                                          <p class="tex_inside12">10/2027</p>
-
-                                                    </div>
-                                                    </div>
-                                                    <div class="two">
-                                                      <p class="ht">Status</p>
-                                                      <p class="ht-1">Completed</p>
-                                                      <p class="ht">ID number</p>
-                                                      <p class="ht-1">EKG2SJFN</p>
-                                                    </div>
-                                                    <div class="three">
-                                                      <p class="ht">Invoice date</p>
-                                                      <p class="ht-1">Apr 10, 2020</p>
-                                                      <p class="ht">Date paid</p>
-                                                      <p class="ht-1">Apr 10, 2020</p>
-                                                      <div class="vl"></div>
-                                                    </div>
-                                                    <div class="four">
-                                                      <p class="ht">Amount due</p>
-                                                      <p class="ht-2">$250</p>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <br/>
-                                                <br/>
-                                                <ul class="hr">
-                                                    <li id="block1">$50.00</li>
-                                                    <li id="completed">Completed</li>
-                                                      <li id="right">Mar 10, 2020</li>
-                                                      <li id="fit">Visa 5432</li>
-                                            </ul>
-                                                <input type="checkbox" id="hd-3" class="hide"/>
-                                                <label id="hd-1-1" for="hd-3" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
-                                                <div>
-                                                  <div class="history">
-                                                    <div class="one">
-                                                      <div class="pay4">
-                                                        <img id="card1-3" src="/src/assets/images/image 7.png" alt="logo">
-                                                        <p class="text_inside10">Card number</p>
-                                                        <p class="nums_inside10">**** **** **** 2345</p>
-                                                        <p class="text_inside20">Card holder name</p>
-                                                        <p class="tex_inside10">Name Surname</p>
-                                                        <p class="text_inside11">Expiration date</p>
-                                                        <p class="tex_inside12">10/2027</p>
-                                                    </div>
-                                                    </div>
-                                                    <div class="two">
-                                                      <p class="ht">Status</p>
-                                                      <p class="ht-1">Completed</p>
-                                                      <p class="ht">ID number</p>
-                                                      <p class="ht-1">EKG2SJFN</p>
-                                                    </div>
-                                                    <div class="three">
-                                                      <p class="ht">Invoice date</p>
-                                                      <p class="ht-1">Mar 10, 2020</p>
-                                                      <p class="ht">Date paid</p>
-                                                      <p class="ht-1">Mar 10, 2020</p>
-                                                      <div class="vl"></div>
-                                                    </div>
-                                                    <div class="four">
-                                                      <p class="ht">Amount due</p>
-                                                      <p class="ht-2">$50</p>
-                                                    </div>
-                                                  </div>
-                                                </div>
+                                              </div>
+                                              <div class="two">
+                                                <p class="ht">Status</p>
+                                                <p class="ht-1">Pending</p>
+                                                <p class="ht">ID number</p>
+                                                <p class="ht-1">EKG2SJFN</p>
+                                              </div>
+                                              <div class="three">
+                                                <p class="ht">Invoice date</p>
+                                                <p class="ht-1">May 10, 2020</p>
+                                                <p class="ht">Date paid</p>
+                                                <p class="ht-1">May 10, 2020</p>
+                                                <div class="vl"></div>
+                                              </div>
+                                              <div class="four">
+                                                <p class="ht">Amount due</p>
+                                                <p class="ht-2">$65</p>
+                                              </div>
                                             </div>
                                           </div>
-                                          <div class="second3">
+                                          <br/>
+                                          <br/>
+                                          <ul class="hr">
+                                              <li id="block1">$250.00</li>
+                                              <li id="completed1">Completed</li>
+                                                <li id="right3">Apr 10, 2020</li>
+                                                <li id="left">Visa 5432</li>
+                                      </ul>
+                                          <input type="checkbox" id="hd-2" class="hide"/>
+                                          <label id="hd-1-1" for="hd-2"><img src="/src/assets/images/arrow.png" alt="arrow"></label>
+                                          <div>
+                                            <div class="history">
+                                              <div class="one">
+                                                <div class="pay3">
+                                                    <p class="text_inside10">Card number</p>
+                                                    <p class="nums_inside10">**** **** **** 2345</p>
+                                                    <p class="text_inside20">Card holder name</p>
+                                                    <p class="tex_inside10">Name Surname</p>
+                                                    <img id="card1-2" src="/src/assets/images/image 7.png" alt="logo">
+                                                    <p class="text_inside11">Expiration date</p>
+                                                    <p class="tex_inside12">10/2027</p>
+
                                               </div>
-                                          <div class="third3">
+                                              </div>
+                                              <div class="two">
+                                                <p class="ht">Status</p>
+                                                <p class="ht-1">Completed</p>
+                                                <p class="ht">ID number</p>
+                                                <p class="ht-1">EKG2SJFN</p>
+                                              </div>
+                                              <div class="three">
+                                                <p class="ht">Invoice date</p>
+                                                <p class="ht-1">Apr 10, 2020</p>
+                                                <p class="ht">Date paid</p>
+                                                <p class="ht-1">Apr 10, 2020</p>
+                                                <div class="vl"></div>
+                                              </div>
+                                              <div class="four">
+                                                <p class="ht">Amount due</p>
+                                                <p class="ht-2">$250</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <br/>
+                                          <br/>
+                                          <ul class="hr">
+                                              <li id="block1">$50.00</li>
+                                              <li id="completed">Completed</li>
+                                                <li id="right">Mar 10, 2020</li>
+                                                <li id="fit">Visa 5432</li>
+                                      </ul>
+                                          <input type="checkbox" id="hd-3" class="hide"/>
+                                          <label id="hd-1-1" for="hd-3" ><img src="/src/assets/images/arrow.png" alt="arrow"></label>
+                                          <div>
+                                            <div class="history">
+                                              <div class="one">
+                                                <div class="pay4">
+                                                  <img id="card1-3" src="/src/assets/images/image 7.png" alt="logo">
+                                                  <p class="text_inside10">Card number</p>
+                                                  <p class="nums_inside10">**** **** **** 2345</p>
+                                                  <p class="text_inside20">Card holder name</p>
+                                                  <p class="tex_inside10">Name Surname</p>
+                                                  <p class="text_inside11">Expiration date</p>
+                                                  <p class="tex_inside12">10/2027</p>
+                                              </div>
+                                              </div>
+                                              <div class="two">
+                                                <p class="ht">Status</p>
+                                                <p class="ht-1">Completed</p>
+                                                <p class="ht">ID number</p>
+                                                <p class="ht-1">EKG2SJFN</p>
+                                              </div>
+                                              <div class="three">
+                                                <p class="ht">Invoice date</p>
+                                                <p class="ht-1">Mar 10, 2020</p>
+                                                <p class="ht">Date paid</p>
+                                                <p class="ht-1">Mar 10, 2020</p>
+                                                <div class="vl"></div>
+                                              </div>
+                                              <div class="four">
+                                                <p class="ht">Amount due</p>
+                                                <p class="ht-2">$50</p>
+                                              </div>
+                                            </div>
                                           </div>
                                       </div>
+                                    </div>
+                                    <div class="second3">
+                                        </div>
+                                    <div class="third3">
+                                    </div>
+                                </div>
                             </div>
                                 <div data-v-60a8d82a="" class="col-md-4 kt-margin-b-20-tablet-and-mobile"></div>
                               </div>
@@ -1058,10 +1059,12 @@
 
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+    <!-- <script src="enter.js"></script>
+    <script src="api.js"></script> -->
     <script src="information.js"></script>
-    <script src="enter.js"></script>
-    <script src="api.js"></script>
   </body>
 <!-- end::Body -->
 </html>

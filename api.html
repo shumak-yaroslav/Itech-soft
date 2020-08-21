@@ -281,13 +281,14 @@
                       <div data-v-60a8d82a="" class="">
                         <div data-v-60a8d82a="" class="kt-margin-b-50">
                                 <div data-v-60a8d82a="" class="api">
+                                  <div id="marketDiff">
                                     <div class="tab">
-                                        <button class="tablink" id="market_N11" onclick="openPage('N11', this),getMarket('N11')">N11</button>
-                                        <button class="tablink" id="market_Trendyal" onclick="openPage('Trendyal', this),getMarket('Trendyal')"">Trendyal</button>
+                                        <button class="tablink" id="market_N11" onclick="openPage('N11', this)" @click="getMarket('N11')">N11</button>
+                                        <button class="tablink" id="market_Trendyal" onclick="openPage('Trendyal', this)"@click="getMarket('Trendyal')">Trendyal</button>
                                         <button class="tablink" id="market_Hepsiburada" onclick="openPage('Hepsiburada', this),getMarket('Hepsiburada')">Hepsiburada</button>
                                         <button class="tablink" id="market_Gittigidiyor" onclick="openPage('Gittigidiyor', this),getMarket('Gittigidiyor')">Gittigidiyor</button>
                                       </div>
-                                <div id="N11" class="tabcontent">
+                                <div id="N11" class="mN11 tabcontent">
                                     <div class="first">
                                         <p>App Key</p><br>
                                         <input type="text" v-model="app_key" id="app_key"><br>
@@ -344,8 +345,9 @@
                                         </div>
                                 </div>
                                 <div class="btns" id="btns">
-                                    <input class="btn1" id="btn1" type="button" value="Save" onclick="postApi()">
+                                    <input class="btn1" id="btn1" type="button" value="Save" @click="chekUsers">
                                     <input class="btn2" id="btn2" type="button" value="Cansel" onclick="">
+                                </div>
                                 </div>
                             </div>
                                 <div data-v-60a8d82a="" class="col-md-4 kt-margin-b-20-tablet-and-mobile"></div>
@@ -902,6 +904,7 @@ document.getElementById("defaultOpen").click();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
     <script src="enter.js"></script>
     <script src="api.js"></script>
   </body>
