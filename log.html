@@ -21,15 +21,14 @@
                     <div class="fields">
                         <input id="Username" v-model="username" type="text" placeholder="Username">
                         <input id="Password" v-model="password" type="password" placeholder="Password">
-                        <a href="javascript: chekLog();"><input class="btn" type="button" value="Confirm" onclick="chekLog()"></a>
+                        <input class="btn" type="button" value="Confirm"  @click="chekUsers">
                 </div>
-                    {{ username }}
-                    {{ password }}
                      <a class = "psw" href="changePassword.html">Forgot passwpord?</a>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
     <script src="log.js"></script>
     <script src="enter.js"></script>
 </body>
