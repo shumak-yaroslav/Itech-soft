@@ -249,5 +249,128 @@ var trendyolproductadd = new Vue ({
     cargoCompanyIds: ["MNG Kargo", "Aras KArgo", "Yurtçi Kargo Marketplace", "UPS Kargo", "PTT"],
   },
   methods:{
+    addProduct1() {
+
+      var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+      var theUrl = "https://api.trendyol.com/sapigw/suppliers/106606/v2/products";
+
+      xmlhttp.addEventListener("readystatechange", function()  {
+      if(this.readyState === 4) {
+        console.log(this.responseText);
+       // var resultText = xhr.responseText;
+        //window.alert(this.responseText);
+
+      //var abc  = this.responseText.split("<");
+       // window.alert(abc[6] + "status"  +abc[10] +"mesaj eror"  +this.responseText);
+       window.alert(this.responseText.replace('{"batchRequestId":""',"").replace('"}"',""));
+
+      if(this.responseText.includes("message"))  {}
+
+        window.alert("Tekrar istek atmadan önce bekleyiniz.!");
+
+      }
+
+      else {
+
+      //  window.location.href = "http://127.0.0.1:5500/trendyolurunler.html#/";
+
+      }
+      }
+      )
+
+      var addProductData = {
+      "items": [
+      {
+        "barcode": "___barcode___",
+        "title": "___title___",
+        "productMainId": "___productMainId___",
+        "brandId": "___brandId___",
+        "categoryId": "___categoryId___",
+        "quantity": "___quantity___",
+        "stockCode": "___stockCode___",
+        "dimensionalWeight": "___dimensionalWeight___",
+        "description": "___description___",
+        "currencyType": "___currencyType___",
+        "listPrice": "___listPrice___",
+        "salePrice": "___salePrice___",
+        "vatRate": "___vatRate___",
+        "cargoCompanyId": "___cargoCompanyId___",
+        "images": [
+          {
+            "url": "___imgurl___"
+          }
+        ],
+        "attributes": [
+         {
+             "attributeId": "___attributeId___",
+             "customAttributeValue": "___customAttributeValue___"
+           }
+
+        ]
+      }
+      ]
+      }
+
+      var postData = JSON.stringify(addProductData);
+
+
+      postData = postData.replace("___barcode___",barcode.value);
+      postData = postData.replace("___title___",title.value);
+      postData = postData.replace("___productMainId___",productMainId.value);
+      postData = postData.replace("___brandId___",brandId.value);
+      postData = postData.replace("___categoryId___",categoryId.value);
+      postData = postData.replace("___quantity___",quantity.value);
+      postData = postData.replace("___stockCode___",stockCode.value);
+      postData = postData.replace("___dimensionalWeight___",dimensionalWeight.value);
+      postData = postData.replace("___description___",description.value);
+      postData = postData.replace("___currencyType___",currencyType.value);
+      postData = postData.replace("___listPrice___",listPrice.value);
+      postData = postData.replace("___salePrice___",salePrice.value);
+      postData = postData.replace("___vatRate___",vatRate.value);
+      postData = postData.replace("___cargoCompanyId___",cargoCompanyId.value);
+      postData = postData.replace("___imgurl___",image_url1.value);
+      postData = postData.replace("___attributeId___",attributeId.value);
+      postData = postData.replace("___customAttributeValue___",customAttributeValue.value);
+
+
+      var count = 60, timer = setInterval(function() {
+      $("#counter").html("Lütfen " +  count-- + " saniye bekleyiniz");
+      if(count == 1) clearInterval(timer);
+      }, 1000);
+
+
+      //window.alert(postData);
+      console.log(postData);
+
+      xmlhttp.withCredentials = true;
+
+      xmlhttp.open("POST", theUrl);
+      xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      //xmlhttp.setRequestHeader("Authorization", authenticateUser("khhNrOWJsRjpq5Jlsosh", "ljLwoxkV97S5LMyH0K8N"));
+      xmlhttp.setRequestHeader("Authorization", "Basic a2hoTnJPV0pzUmpwcTVKbHNvc2g6bGpMd294a1Y5N1M1TE15SDBLOE4=");
+      xmlhttp.send(postData);
+
+
+      }
+
+      // function checkProductStatus() {
+
+      // var xhr = new XMLHttpRequest();
+
+      // xhr.addEventListener("readystatechange", function()  {
+      // if(this.readyState === 4) {
+      //   console.log(this.responseText);
+      //   var resultText = xhr.responseText;
+
+      // }
+      // })
+
+      // xhr.open("GET", "https://api.trendyol.com/sapigw/suppliers/106606/products/");
+      // //xhr.send();
+
+      // }
   }
 });
+
+
+

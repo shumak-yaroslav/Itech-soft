@@ -228,5 +228,103 @@ var n11productadd = new Vue ({
     approvalStatuses: ["Aktif(Satışta)", "Beklemede", "Yasaklı"],
   },
   methods:{
+    addProduct1() {
+
+      var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+      var theUrl = "http://localhost:8080/ws_iltech_n11/ws/saveproduct";
+
+      xmlhttp.addEventListener("readystatechange", function()  {
+      if(this.readyState === 4) {
+        console.log(this.responseText);
+       // var resultText = xhr.responseText;
+        window.alert(this.responseText);
+
+       //var abc  = this.responseText.split("<");
+       // window.alert(abc[6] + "status"  +abc[10] +"mesaj eror"  +this.responseText);
+
+       if(this.resultText.includes("success")) {
+
+        //window.location.href = "http://127.0.0.1:5500/urunler.html#/";
+       }
+
+
+
+      }
+      })
+
+      var addProductData = {
+              "appKey":"___appKey___",
+              "appSecret":"___appSecret___",
+              "productSellerCode":"___productSellerCode___",
+              "title":"___title___",
+              "subtitle":"___subtitle___",
+              "description":"___description___",
+              "category_id":"___categoryid___",
+              "specialProductInfo_key1":"___specialProductInfo_key1___",
+              "specialProductInfo_value1":"___specialProductInfo_value1___",
+              "price":"___price___",
+              "currencyType":"___curr_type___",
+              "image_url1":"___img_url1___",
+              "image_order1":"___img_order1___",
+              "approvalStatus":"2",
+              "productCondition":"2",
+              "preparingDay":"___preparingDay__",
+              "shipmentTemplate":"test",
+              "stockItem_gtin1":"___stockItem_gtin1___",
+              "stockItem_attribute_name1":"___stockItem_attribute_name1___",
+              "stockItem_attribute_value1":"___stockItem_attribute_value1___",
+              "stockItem_quantity1":"___stockItem_quantity1___"
+          }
+
+      var postData = JSON.stringify(addProductData);
+
+      postData = postData.replace("___appKey___","71faab12-d47e-432e-a4a2-5546c49cb1c4");
+            postData = postData.replace("___appSecret___","FrOoxTV9Mk4R5KI5");
+            postData = postData.replace("___productSellerCode___", productSellerCode.value);
+            postData = postData.replace("___title___",title.value);
+            postData = postData.replace("___subtitle___",subtitle.value);
+            postData = postData.replace("___description___",description.value);
+            postData = postData.replace("___categoryid___",category_id.value);
+            postData = postData.replace("___specialProductInfo_key1___",specialProductInfo_key1.value);
+            postData = postData.replace("___specialProductInfo_value1___",specialProductInfo_value1.value);
+            postData = postData.replace("___price___",price.value);
+            postData = postData.replace("___curr_type___",currencyType.value);
+            postData = postData.replace("___img_url1___",image_url1.value);
+            postData = postData.replace("___img_order1___",image_order1.value);
+            postData = postData.replace("___approvalStatus___",approvalStatus.value);
+            postData = postData.replace("___productCondition___",productCondition.value);
+            postData = postData.replace("___preparingDay__",preparingDay.value);
+            postData = postData.replace("___shipmentTemplate___",shipmentTemplate.value);
+            postData = postData.replace("___stockItem_gtin1___",stockItem_gtin1.value);
+            postData = postData.replace("___stockItem_attribute_name1___",stockItem_attribute_name1.value);
+            postData = postData.replace("___stockItem_attribute_value1___",stockItem_attribute_value1.value);
+            postData = postData.replace("___stockItem_quantity1___",stockItem_quantity1.value);
+            console.log(postData);
+
+
+
+      // xmlhttp.open("POST", theUrl);
+      // xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      // xmlhttp.send(postData);
+
+
+      //counter for another post request
+      var count = 10, timer = setInterval(function() {
+
+      $("#counter").css("visibility", "visible");
+      $("#counter").html("Lütfen " +  count-- + " saniye bekleyiniz");
+      if(count == 0) {
+      clearInterval(timer);
+      $("#counter").css("visibility", "hidden");
+      }
+      }, 1000);
+
+      //window.alert(postData);
+      //console.log(postData);
+
+
+      }
   }
 });
+
+

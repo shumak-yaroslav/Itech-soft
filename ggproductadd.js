@@ -114,5 +114,65 @@ var ggproductadd = new Vue ({
     productCount: '',
   },
   methods:{
+     addProduct1() {
+
+      var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+      var theUrl = "";
+
+      xmlhttp.addEventListener("readystatechange", function()  {
+      if(this.readyState === 4) {
+        console.log(this.responseText);
+       window.alert(this.responseText.replace('{"batchRequestId":""',"").replace('"}"',""));
+
+      if(this.responseText.includes("message"))  {}
+      }
+
+      else {
+
+      }
+      }
+      )
+
+      var addProductData = {
+
+      "sign": "__sign__",
+      "timestamp": "___timestamp___",
+      "itemId": "___itemId___",
+      "categoryCode": "___categoryCode___",
+      "title": "___title___",
+      "subtitle": "___subtitle___",
+      "description": "___description___",
+      "buyNowPrice": "___buyNowPrice___",
+      "productCount": "___productCount___"
+
+      }
+
+      var postData = JSON.stringify(addProductData);
+
+      var date = new Date();
+      var timestamp = date.getTime();
+      var md5Hash = CryptoJS.MD5("mF4bqc8r3vsWaGemkmkbqN9bgThQJTuS"+"HPMUgcUtQ2Fn6VEe"+ timestamp);
+
+
+      postData = postData.replace("___itemId___", itemId.value);
+      postData = postData.replace("___categoryCode___", categoryCode.value);
+      postData = postData.replace("___title___", title.value);
+      postData = postData.replace("___subtitle___", subtitle.value);
+      postData = postData.replace("___description___", description.value);
+      postData = postData.replace("___buyNowPrice___", buyNowPrice.value);
+      postData = postData.replace("___productCount___", productCount.value);
+      postData = postData.replace("__sign__",md5Hash);
+      postData = postData.replace("___timestamp___",timestamp);
+
+      console.log(postData);
+
+
+      xmlhttp.open("POST", "http://localhost:8080/ws_iltech_n11/ws/putproductGG");
+      xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      xmlhttp.send(postData);
+
+
+      }
   }
 });
+
