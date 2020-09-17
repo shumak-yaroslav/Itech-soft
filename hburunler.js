@@ -395,213 +395,207 @@
 //   //xhr.setRequestHeader("Authorization", "Basic " + auth);
 
 //   xhr.send();
+(async function loadData() {
+  let url = 'http://51.68.195.202:8080/ws_iltech_n11/ws/getproductshepsiburada';
+  let response = await fetch(url);
+  let commits = await response.json(); // читаем ответ в формате JSON
+  let get_smth = commits;
+  let obj = get_smth.listings;
+  console.log(obj);
+  if(obj.length != 0){
+    new Vue({
+      el: '#example-table',
+      data() {
+          return {
+              dados: obj,
+              options: {
+                  columns: [{
+
+                      formatter:"rownum" ,
+                      sorter:"number",
+                      width:50,
+                      headerTooltip:true,
+                      title:"ID",
+                      field:"row_id",
+                      editor: true,
+                    },
+
+                  {
+                    title:"hepsiburadaSku",
+                    field:"hepsiburadaSku",
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    width: 170,
+                    editor: true,
+                  },
+
+                  {
+                    title:"MerchantSku",
+                    field:"merchantSku",
+                    sorter:"string",
+                    tooltip:true ,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    width: 170,
+                    editor: true,
+                  },
+                  {
+                    title:"Fiyatı",
+                    field:"price",
+                    sorter:"number",
+                    width:180,
+                    tooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Stok Adet",
+                    field:"quantity",
+                    sorter: 'string',
+                    width: 166,
+                    editor: true,
+                    tooltip:true,
+                  },
+
+                  {
+                    title:"Kargo veriliş Süresi",
+                    visible:false,
+                    field:"dispatchTime",
+                    sorter:"string",
+                    tooltip:true,
+                    headerTooltip:true,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    editor: true,
+                    width:170,
+                  },
+
+                  {
+                    title:"Karog Şirketi",
+                    field:"cargoCompany1",
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    width: 170,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Kargo Adres",
+                    field:"shippingAddressLabel",
+                    sorter:"string",
+                    tooltip:true ,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    width: 190,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Komisyon Oranı",
+                    field:"commissionRate",
+                    sorter:"string",
+                    tooltip:true ,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    width: 187,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Açıklama",
+                    visible:false,
+                    field:"description",
+                    sorter:"string",
+                    tooltip:true ,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    width: 190,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Onay Durumu",
+                    visible:false,
+                    field:"approved",
+                    sorter:"string",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"dimensionalWeight",
+                    visible:false,
+                    field:"dimensionalWeight",
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Kur tipi",
+                    visible:false,
+                    field:"currencyType",
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Liste Fiyatı",
+                    visible:false,
+                    field:"listPrice",
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Satış fiyatı",
+                    visible:false,
+                    field:"salePrice",
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Güncelle" ,
+                    field:"Güncelle",
+                    sortable:false,
+                    width: 300,
+                //     formatter:updateIcon,cellClick:function(e, row){
+                //     //e - the click event object
+                //     //cell - cell component
+                //     document.getElementById("barcode").value = row.getData().barcode;
 
 
-
-new Vue({
-  el: '#example-table',
-  data() {
-      return {
-          dados: [{
-            hepsiburadaSku: 'Test',
-            merchantSku: 'Test',
-            price: 'Test',
-            quantity: 'Test',
-            dispatchTime: 'Test',
-            cargoCompany1: 'Test',
-            shippingAddressLabel: 'Test',
-            commissionRate: 'Test',
-            description: 'Test',
-            approved: 'Test',
-            salePrice: 'Test',
-            dimensionalWeight: 'Test',
-            currencyType: 'Test',
-            listPrice: 'Test',
-            Güncelle: 'Test',
-
-          }],
-          options: {
-              columns: [{
-
-                  formatter:"rownum" ,
-                  sorter:"number",
-                  width:50,
-                  headerTooltip:true,
-                  title:"ID",
-                  field:"row_id",
-                  editor: true,
-                },
-
-              {
-                title:"hepsiburadaSku",
-                field:"hepsiburadaSku",
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                width: 170,
-                editor: true,
-              },
-
-              {
-                title:"MerchantSku",
-                field:"merchantSku",
-                sorter:"string",
-                tooltip:true ,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                width: 170,
-                editor: true,
-              },
-              {
-                title:"Fiyatı",
-                field:"price",
-                sorter:"number",
-                width:180,
-                tooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Stok Adet",
-                field:"quantity",
-                sorter: 'string',
-                width: 166,
-                editor: true,
-                tooltip:true,
-              },
-
-              {
-                title:"Kargo veriliş Süresi",
-                visible:false,
-                field:"dispatchTime",
-                sorter:"string",
-                tooltip:true,
-                headerTooltip:true,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                editor: true,
-                width:170,
-              },
-
-              {
-                title:"Karog Şirketi",
-                field:"cargoCompany1",
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                width: 170,
-                editor: true,
-              },
-
-              {
-                title:"Kargo Adres",
-                field:"shippingAddressLabel",
-                sorter:"string",
-                tooltip:true ,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                width: 190,
-                editor: true,
-              },
-
-              {
-                title:"Komisyon Oranı",
-                field:"commissionRate",
-                sorter:"string",
-                tooltip:true ,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                width: 187,
-                editor: true,
-              },
-
-              {
-                title:"Açıklama",
-                visible:false,
-                field:"description",
-                sorter:"string",
-                tooltip:true ,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                width: 190,
-                editor: true,
-              },
-
-              {
-                title:"Onay Durumu",
-                visible:false,
-                field:"approved",
-                sorter:"string",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"dimensionalWeight",
-                visible:false,
-                field:"dimensionalWeight",
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Kur tipi",
-                visible:false,
-                field:"currencyType",
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Liste Fiyatı",
-                visible:false,
-                field:"listPrice",
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Satış fiyatı",
-                visible:false,
-                field:"salePrice",
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Güncelle" ,
-                field:"Güncelle",
-                sortable:false,
-                width: 300,
-            //     formatter:updateIcon,cellClick:function(e, row){
-            //     //e - the click event object
-            //     //cell - cell component
-            //     document.getElementById("barcode").value = row.getData().barcode;
+                //     var modal = document.getElementById("myModal");
+                //     var btn = document.getElementById("myBtn");
+                //     var span = document.getElementsByClassName("close")[0];
+                //   //  modal.style.display = "block";
+                //     span.onclick = function() {
+                //     modal.style.display = "none";
+                // }
 
 
-            //     var modal = document.getElementById("myModal");
-            //     var btn = document.getElementById("myBtn");
-            //     var span = document.getElementsByClassName("close")[0];
-            //   //  modal.style.display = "block";
-            //     span.onclick = function() {
-            //     modal.style.display = "none";
-            // }
-
-
-            //     //window.alert("clickedd" +  cell.getData.salePrice);
-            //     },
+                //     //window.alert("clickedd" +  cell.getData.salePrice);
+                //     },
+                  }
+                ],
               }
-            ],
           }
       }
+    });
   }
-});
+}());
+
+
+
+
 

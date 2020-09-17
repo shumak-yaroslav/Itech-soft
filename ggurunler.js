@@ -218,123 +218,126 @@
 
 // }
 
+(async function loadData() {
+  var date = new Date();
+  var timestamp = date.getTime();
+  var md5Hash = CryptoJS.MD5("mF4bqc8r3vsWaGemkmkbqN9bgThQJTuS"+"HPMUgcUtQ2Fn6VEe"+ timestamp);
+  let url = 'http://51.68.195.202:8080/ws_iltech_n11/ws/getproductsgg?sign=' + md5Hash + '&timestamp=' + timestamp;
+  let response = await fetch(url);
+  let commits = await response.json(); // читаем ответ в формате JSON
+  let get_smth = commits;
+  let obj = get_smth.product;
+  console.log(obj);
+  if(obj.length != 0){
+    new Vue({
+      el: '#example-table',
+      data() {
+          return {
+              dados: obj,
+              options: {
+                  columns: [{
 
-new Vue({
-  el: '#example-table',
-  data() {
-      return {
-          dados: [{
-              productId: 'Test',
-              categoryCode: 'Test',
-              title: 'Test',
-              subtitle: 'Test',
-              description: 'Test',
-              price: 'Test',
-              quantity: 'Test',
-              discount_value: 'Test',
+                      formatter:"rownum" ,
+                      sorter:"number",
+                      width:50,
+                      headerTooltip:true,
+                      title:"ID",
+                      field:"row_id",
+                      editor: true,
+                    },
 
-          }],
-          options: {
-              columns: [{
+                  {
+                    title:"Ürün Id",
+                    field:"productId" ,
+                    width: 250,
+                    editor: true,
+                    sorter:"number",
+                    headerTooltip:true,
+                  },
 
-                  formatter:"rownum" ,
-                  sorter:"number",
-                  width:50,
-                  headerTooltip:true,
-                  title:"ID",
-                  field:"row_id",
-                  editor: true,
-                },
+                  {
+                    title:"Kategori Kodu",
+                    field:"categoryCode",
+                    width: 250,
+                    editor: true,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    sorter:"string",
+                    tooltip:true,
+                    headerTooltip:true,
+                  },
+                  {
+                    title:"Başlık",
+                    field:"title",
+                    sorter: 'string',
+                    width: 250,
+                    editor: true,
+                    tooltip:true ,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                  },
 
-              {
-                title:"Ürün Id",
-                field:"productId" ,
-                width: 250,
-                editor: true,
-                sorter:"number",
-                headerTooltip:true,
-              },
+                  {
+                    title:"Altbaşlık",
+                    field:"subtitle",
+                    sorter: 'string',
+                    width: 173,
+                    editor: true,
+                    tooltip:true,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                  },
 
-              {
-                title:"Kategori Kodu",
-                field:"categoryCode",
-                width: 250,
-                editor: true,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                sorter:"string",
-                tooltip:true,
-                headerTooltip:true,
-              },
-              {
-                title:"Başlık",
-                field:"title",
-                sorter: 'string',
-                width: 250,
-                editor: true,
-                tooltip:true ,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-              },
+                  {
+                    title:"Açıklama",
+                    visible:false,
+                    field:"description",
+                    sorter:"string",
+                    tooltip:true,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    editor: true,
+                  },
 
-              {
-                title:"Altbaşlık",
-                field:"subtitle",
-                sorter: 'string',
-                width: 173,
-                editor: true,
-                tooltip:true,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-              },
+                  {
+                    title:"Fiyat",
+                    field:"price",
+                    editor: true,
+                    sorter:"number",
+                    width:200,
+                    tooltip:true,
+                  },
 
-              {
-                title:"Açıklama",
-                visible:false,
-                field:"description",
-                sorter:"string",
-                tooltip:true,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                editor: true,
-              },
-
-              {
-                title:"Fiyat",
-                field:"price",
-                editor: true,
-                sorter:"number",
-                width:200,
-                tooltip:true,
-              },
-
-              {
-                title:"Stok Adet",
-                field:"quantity",
-                sorter: 'string',
-                width: 200,
-                editor: true,
-                tooltip:true,
-              },
+                  {
+                    title:"Stok Adet",
+                    field:"quantity",
+                    sorter: 'string',
+                    width: 200,
+                    editor: true,
+                    tooltip:true,
+                  },
 
 
-              {
-                title:"Sil" ,
-                field:"discount_value",
-                sorter: 'string',
-                width: 210,
-                editor: true,
-                sortable:false,
-                //formatter:deleteIcon,
-                // cellClick:function(e, row){
-                //     delProduct1(row.getData().productId);
-                // },
+                  {
+                    title:"Sil" ,
+                    field:"discount_value",
+                    sorter: 'string',
+                    width: 210,
+                    editor: true,
+                    sortable:false,
+                    //formatter:deleteIcon,
+                    // cellClick:function(e, row){
+                    //     delProduct1(row.getData().productId);
+                    // },
+                  }
+                ],
               }
-            ],
           }
       }
+    });
   }
-});
+}());
+
 
 
 // columns:[

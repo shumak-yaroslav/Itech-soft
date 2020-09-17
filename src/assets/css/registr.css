@@ -4,7 +4,7 @@ body {
     margin: 0px;
     padding: 0;
   }
-  
+
   .container {
     display: grid;
     grid-template-columns: 30% 70%;
@@ -17,7 +17,7 @@ body {
 }
 
 #text_form {
-    margin-top: 30px;
+    margin-top: 15px;
     font-family: Poppins;
 font-style: normal;
 font-weight: normal;
@@ -32,7 +32,7 @@ color: #434349;
 .reg{
     position: absolute;
     width: 1295px;
-    height: 880px;
+    height: 940px;
     margin: 30px;
     left: 29.5%;
     background: #FFFFFF;
@@ -73,9 +73,9 @@ color: #434349;
     font-size: 20px;
     line-height: 30px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
 }
 
@@ -134,7 +134,7 @@ input{
     position: absolute;
     width: 335px;
     height: 50px;
-    margin-top: 70px;
+    margin-top: 150px;
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
@@ -156,7 +156,7 @@ input{
 
 #first_label {
     display: inline-block;
-    margin-left: 495px;
+    margin-left: 555px;
     margin-top: 100px;
     font-family: Poppins;
 font-style: normal;
@@ -196,14 +196,15 @@ color: #000000;
 .left_toolbar {
     background-color: #1E1E2D;
     margin: 0px;
+    height: 1000px;
   }
-  
+
   #logo {
     margin-top: 50px;
     margin-left: 30%;
     width: 35%;
   }
-  
+
   #group {
     margin-top: 200px;
     margin-left: 15%;
@@ -240,7 +241,7 @@ color: #000000;
     margin-top: 15px;
     padding-left: 10px;
     }
-    
+
     .btn {
     width: 335px;
     height: 50px;
@@ -275,25 +276,25 @@ color: #434349;
     .reg{
         position: absolute;
         width: 67%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 29.5%;
         background: #FFFFFF;
         border-radius: 10px;
-    } 
-    
+    }
+
     #check {
         position: absolute;
         margin-top: 100px;
-        left: 35%;       
+        left: 35%;
     }
 
     #sign{
-        
+
         left: 49%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -301,8 +302,8 @@ color: #434349;
     line-height: 36px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -317,15 +318,15 @@ color: #434349;
         font-size: 20px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
     #first_label {
         display: inline-block;
-        margin-left: 36%;
+        margin-left: 42%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -333,9 +334,9 @@ color: #434349;
     font-size: 16px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
     .btn1{
@@ -385,25 +386,25 @@ color: #434349;
     .reg{
         position: absolute;
         width: 67%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 29.5%;
         background: #FFFFFF;
         border-radius: 10px;
-    } 
-    
+    }
+
     #check {
         position: absolute;
         margin-top: 100px;
-        left: 35%;       
+        left: 35%;
     }
 
     #sign{
-        
+
         left: 51%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -411,8 +412,8 @@ color: #434349;
     line-height: 36px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -427,15 +428,15 @@ color: #434349;
         font-size: 20px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
     #first_label {
         display: inline-block;
-        margin-left: 36%;
+        margin-left: 42%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -443,9 +444,9 @@ color: #434349;
     font-size: 16px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
     .btn1{
@@ -499,17 +500,17 @@ color: #434349;
     .reg{
         position: absolute;
         width: 67%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 29.5%;
         background: #FFFFFF;
         border-radius: 10px;
-    } 
-    
+    }
+
     #check {
         position: absolute;
         margin-top: 100px;
-        left: 35%;       
+        left: 35%;
     }
 
     #sign{
@@ -517,7 +518,7 @@ color: #434349;
         left: 53.5%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -525,8 +526,8 @@ color: #434349;
     line-height: 36px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -541,15 +542,15 @@ color: #434349;
         font-size: 20px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
     #first_label {
         display: inline-block;
-        margin-left: 36%;
+        margin-left: 42%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -557,9 +558,9 @@ color: #434349;
     font-size: 16px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
     .btn1{
@@ -614,7 +615,7 @@ color: #434349;
         color: #FFFFFF;
         background: #3758FF;
         left: -210px;
-    
+
     }
 
 }
@@ -622,17 +623,17 @@ color: #434349;
     .reg{
         position: absolute;
         width: 67%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 29.5%;
         background: #FFFFFF;
         border-radius: 10px;
-    } 
-    
+    }
+
     #check {
         position: absolute;
         margin-top: 100px;
-        left: 35%;       
+        left: 35%;
     }
 
     #sign{
@@ -640,7 +641,7 @@ color: #434349;
         left: 55%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -648,8 +649,8 @@ color: #434349;
     line-height: 36px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -664,15 +665,15 @@ color: #434349;
         font-size: 20px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
     #first_label {
         display: inline-block;
-        margin-left: 36%;
+        margin-left: 42%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -680,9 +681,9 @@ color: #434349;
     font-size: 16px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
     .btn1{
@@ -737,7 +738,7 @@ color: #434349;
         color: #FFFFFF;
         background: #3758FF;
         left: -210px;
-    
+
     }
     input{
         border: 1px solid #E2E5EC;
@@ -756,17 +757,17 @@ color: #434349;
     .reg{
         position: absolute;
         width: 67%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 29.5%;
         background: #FFFFFF;
         border-radius: 10px;
-    } 
-    
+    }
+
     #check {
         position: absolute;
         margin-top: 100px;
-        left: 30%;       
+        left: 30%;
     }
 
     #sign{
@@ -774,7 +775,7 @@ color: #434349;
         left: 50%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -782,8 +783,8 @@ color: #434349;
     line-height: 36px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -798,15 +799,15 @@ color: #434349;
         font-size: 20px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
     #first_label {
         display: inline-block;
-        margin-left: 31%;
+        margin-left: 40%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -814,9 +815,9 @@ color: #434349;
     font-size: 16px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
     .btn1{
@@ -872,7 +873,7 @@ color: #434349;
         color: #FFFFFF;
         background: #3758FF;
         left: -210px;
-    
+
     }
     input{
         border: 1px solid #E2E5EC;
@@ -894,7 +895,7 @@ color: #434349;
             margin-top: 20px;
             width: 250px;
         }
-        
+
 
         #first {
             transform:scale(0.5);
@@ -916,19 +917,19 @@ color: #434349;
 
 @media screen and (max-width: 950px){
 
-    
+
     #check {
         position: absolute;
         margin-top: 100px;
-        left: 22%;       
+        left: 22%;
     }
 
     #sign{
-        
+
         left: 49%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -936,8 +937,8 @@ color: #434349;
     line-height: 36px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -952,15 +953,15 @@ color: #434349;
         font-size: 20px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
     #first_label {
         display: inline-block;
-        margin-left: 24.5%;
+        margin-left: 36%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -968,9 +969,9 @@ color: #434349;
     font-size: 16px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
     .btn1{
@@ -989,45 +990,46 @@ color: #434349;
     .reg{
         position: absolute;
         width: 93%;
-        height: 880px;
+        height: 940px;
         margin: 30px;
         left: 0%;
         background: #FFFFFF;
         border-radius: 10px;
-    } 
-    
+    }
+
     .left_toolbar {
         display: none;
         background-color: #1E1E2D;
         margin: 0px;
+        height: 1000px;
       }
-      
+
       #logo {
         display: none;
         margin-top: 50px;
         margin-left: 30%;
         width: 35%;
       }
-      
+
       #group {
         display: none;
         margin-top: 200px;
         margin-left: 15%;
         width: 75%;
       }
-    
+
     #check {
         position: absolute;
         margin-top: 100px;
-        left: 22%;       
+        left: 22%;
     }
 
     #sign{
-        
+
         left: 48%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -1035,8 +1037,8 @@ color: #434349;
     line-height: 36px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -1051,15 +1053,15 @@ color: #434349;
         font-size: 20px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
     #first_label {
         display: inline-block;
-        margin-left: 30%;
+        margin-left: 38%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -1067,9 +1069,9 @@ color: #434349;
     font-size: 16px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
     .btn1{
@@ -1085,11 +1087,11 @@ color: #434349;
 
 @media screen and (max-width: 783px){
     #sign{
-        
+
         left: 50%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -1097,8 +1099,8 @@ color: #434349;
     line-height: 36px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -1113,15 +1115,15 @@ color: #434349;
         font-size: 20px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
     #first_label {
         display: inline-block;
-        margin-left: 30%;
+        margin-left: 38%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -1129,19 +1131,39 @@ color: #434349;
     font-size: 16px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
 }
+
+
+@media screen and (max-width: 1265px){
+    .btn2{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 1251px){
+    .btn2{
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    #company_address1{
+        width: 250px;
+    }
+}
+
 @media screen and (max-width: 700px){
     #sign{
-        
+
         left: 52%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -1149,8 +1171,8 @@ color: #434349;
     line-height: 36px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -1165,15 +1187,15 @@ color: #434349;
         font-size: 20px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
     #first_label {
         display: inline-block;
-        margin-left: 30%;
+        margin-left: 39%;
         margin-top: 100px;
         font-family: Poppins;
     font-style: normal;
@@ -1181,11 +1203,65 @@ color: #434349;
     font-size: 16px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
+}
+
+@media screen and (max-width: 520px){
+    #first_label {
+        display: inline-block;
+        margin-left: 39%;
+        margin-top: 130px;
+        font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+    }
+
+    #first {
+        margin-top: 120px;
+    }
+
+    #second {
+        margin-top: 120px;
+    }
+
+}
+
+@media screen and (max-width: 430px){
+    #first_label {
+        display: inline-block;
+        margin-left: 30%;
+        margin-top: 130px;
+        font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+    }
+
+    #first {
+        margin-top: 120px;
+    }
+
+    #second {
+        margin-top: 120px;
+    }
+
 }
 
 @media screen and (min-device-width : 768px) and (min-height: 1366px){
@@ -1203,42 +1279,43 @@ color: #434349;
         left: 28.5%;
         background: #FFFFFF;
         border-radius: 10px;
-    } 
-   
-    
+    }
+
+
     .left_toolbar {
-      
+
         background-color: #1E1E2D;
         margin: 0px;
+        height: 1000px;
       }
-      
+
       #logo {
-       
+
         margin-top: 50px;
         margin-left: 30%;
         width: 40%;
       }
-      
+
       #group {
-        
+
         margin-top: 200px;
         margin-left: 15%;
         width: 80%;
       }
-    
+
     #check {
         position: absolute;
         margin-top: 100px;
-        left: 24%;     
-        height: 400px;  
+        left: 24%;
+        height: 400px;
     }
 
     #sign{
-        
+
         left: 49%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -1246,8 +1323,8 @@ color: #434349;
     line-height: 40px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -1262,9 +1339,9 @@ color: #434349;
         font-size: 24px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
@@ -1278,9 +1355,9 @@ color: #434349;
     font-size: 20px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
     #second_label{
@@ -1308,7 +1385,7 @@ color: #434349;
         height: 110px;
     }
     #Address{
-        
+
         height: 100px;
     }
 
@@ -1340,8 +1417,8 @@ color: #434349;
     #check {
         position: absolute;
         margin-top: 100px;
-        left: 21%;     
-        height: 400px;  
+        left: 21%;
+        height: 400px;
     }
     .btn1{
         margin-top: 560px;
@@ -1353,11 +1430,11 @@ color: #434349;
         position: absolute;
     }
     #sign{
-        
+
         left: 49%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -1365,8 +1442,8 @@ color: #434349;
     line-height: 40px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -1381,9 +1458,9 @@ color: #434349;
         font-size: 24px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
@@ -1397,9 +1474,9 @@ color: #434349;
     font-size: 20px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
     #second_label{
@@ -1419,20 +1496,20 @@ color: #434349;
         width: 102%;
         height: 830px;
         margin: 10px;
-        
-        
+
+
         background: #FFFFFF;
         border-radius: 10px;
-    } 
+    }
     #check{
         width: 250px;
     }
     #sign{
-        
+
         left: 52%;
         transform: translate(-50%, 0);
         top: 10px;
-    
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -1440,8 +1517,8 @@ color: #434349;
     line-height: 40px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -1456,9 +1533,9 @@ color: #434349;
         font-size: 12px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
@@ -1472,21 +1549,21 @@ color: #434349;
     font-size: 12px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
     #second_label{
         font-size: 12px;
-        
+
     }
     #first,#second{
      margin-top: 67px;
      margin-left: -62px;
     }
     input{
-        
+
         border: 1px solid #E2E5EC;
         box-sizing: border-box;
         font-size: 9px;
@@ -1495,35 +1572,35 @@ color: #434349;
         height: 30px;
         margin-top: 15px;
         padding-left: 10px ;
-          
+
     }
 
     .fields{
         position: absolute;
           width: 200px;
           height: 491px;
-        
+
           top: 100px;
     }
     .field1{
         position: absolute;
           width: 200px;
           height: 491px;
-        
+
           top: 110px;
     }
     .field2{
         position: absolute;
           width: 200px;
           height: 491px;
-        
+
           top: 100px;
     }
     .field3{
         position: absolute;
           width: 200px;
           height: 491px;
-        
+
           top: 100px;
     }
     .text_css{
@@ -1557,7 +1634,7 @@ color: #434349;
         margin-top: 70px;
     }
     #btn3{
-        
+
         margin-left: 100px;
 
     }
@@ -1565,7 +1642,7 @@ color: #434349;
         width: 245px;
         height: 30px;
         margin-top: 450px;
-        
+
     }
 
 }
@@ -1579,19 +1656,19 @@ color: #434349;
         width: 114%;
         height: 750px;
         margin: 10px;
-        
-        
+
+
         background: #FFFFFF;
         border-radius: 10px;
-    } 
+    }
     #check{
         width: 250px;
     }
     #sign{
-        
+
         left: 52%;
         transform: translate(-50%, 0);
-        
+
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -1599,8 +1676,8 @@ color: #434349;
     line-height: 40px;
     text-align: center;
     /* identical to box height */
-    
-    
+
+
     color: #434349;
     }
 
@@ -1615,9 +1692,9 @@ color: #434349;
         font-size: 12px;
         line-height: 30px;
         /* identical to box height */
-        
+
         text-align: center;
-        
+
         color: #000000;
     }
 
@@ -1631,21 +1708,21 @@ color: #434349;
     font-size: 12px;
     line-height: 24px;
     /* identical to box height */
-    
+
     text-align: center;
-    
+
     color: #000000;
     }
     #second_label{
         font-size: 12px;
-        
+
     }
     #first,#second{
      margin-top: 67px;
      margin-left: -62px;
     }
     input{
-        
+
         border: 1px solid #E2E5EC;
         box-sizing: border-box;
         font-size: 9px;
@@ -1654,35 +1731,35 @@ color: #434349;
         height: 30px;
         margin-top: 15px;
         padding-left: 10px ;
-          
+
     }
 
     .fields{
         position: absolute;
           width: 200px;
           height: 491px;
-        
+
           top: 100px;
     }
     .field1{
         position: absolute;
           width: 200px;
           height: 491px;
-        
+
           top: 110px;
     }
     .field2{
         position: absolute;
           width: 200px;
           height: 491px;
-        
+
           top: 100px;
     }
     .field3{
         position: absolute;
           width: 200px;
           height: 491px;
-        
+
           top: 100px;
     }
     .text_css{
@@ -1716,7 +1793,7 @@ color: #434349;
         margin-top: 70px;
     }
     #btn3{
-        
+
         margin-left: 100px;
 
     }
@@ -1724,7 +1801,27 @@ color: #434349;
         width: 245px;
         height: 30px;
         margin-top: 450px;
-        
+
     }
 
+}
+
+#tax_number1 {
+    margin-top: -50px;
+}
+
+#username1 {
+    margin-top: 0px;
+}
+
+#signature_officer_name_surname1 {
+    margin-top: 0px;
+}
+
+#company_address1 {
+    margin-top: 15px;
+}
+
+#company_local_no1 {
+    margin-top: 0px;
 }
