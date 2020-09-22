@@ -409,257 +409,247 @@
 // //xhr.setRequestHeader("Authorization", "Basic " + auth);
 // xhr.send();
 
+(async function loadData() {
+  let url = 'http://51.68.195.202:8080/ws_iltech_n11/ws/getproductstrendyol?supplier_id=112308&approved=';
+  let response = await fetch(url);
+  let commits = await response.json(); // читаем ответ в формате JSON
+  let get_smth = commits;
+  let obj = get_smth.content;
+  console.log(obj);
+
+  if(obj.length != 0){
+    new Vue({
+      el: '#example-table',
+      data() {
+          return {
+              dados: obj,
+              options: {
+                  columns: [{
+
+                      title:"ID",
+                      field:"id",
+                      formatter:"rownum",
+                      sorter:"number",
+                      width:50,
+                      headerTooltip:true,
+                      editor: true,
+                    },
+
+                  {
+                    title:"Barkod",
+                    field:"barcode",
+                    sorter:"string",
+                    width:170,
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Ürün Adı",
+                    field:"title",
+                    sorter:"string",
+                    width:170,
+                    tooltip:true ,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    editor: true,
+                  },
+                  {
+                    title:"Marka Id",
+                    visible:false,
+                    field:"brandId",
+                    width:170,
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Ürün Ana Numarası",
+                    visible:false,
+                    field:"productMainId",
+                    width:170,
+                    sorter:"string",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Ürün Kodu",
+                    field:"productCode",
+                    width:170,
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Ürün Adı",
+                    field:"title",
+                    width:170,
+                    sorter:"string",
+                    tooltip:true,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    editor: true,
+                  },
+
+                  {
+                    title:"Kategori Adı",
+                    field:"categoryName",
+                    width:170,
+                    sorter:"string",
+                    tooltip:true,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    editor: true,
+                  },
+
+                  {
+                    title:"Açıklama",
+                    field:"description",
+                    width:153,
+                    sorter:"string",
+                    tooltip:true,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    editor: true,
+                  },
+
+                  {
+                    title:"Stok Adet",
+                    field:"quantity",
+                    width:150,
+                    sorter:"string",
+                    tooltip:true,
+                    headerTooltip:true,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    editor: true,
+                  },
+
+                  {
+                    title:"Stok Kodu",
+                    visible:false,
+                    field:"stockCode",
+                    width:150,
+                    sorter:"string",
+                    tooltip:true,
+                    headerTooltip:true,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    editor: true,
+                  },
+
+                  {
+                    title:"Onay Durumu",
+                    field:"approved",
+                    width:150,
+                    sorter:"string",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Fiyatı",
+                    field:"salePrice",
+                    sorter:"number",
+                    width:80,
+                    tooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"dimensionalWeight",
+                    visible:false,
+                    field:"dimensionalWeight",
+                    width:150,
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Kur tipi",
+                    visible:false,
+                    field:"currencyType",
+                    width:170,
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Liste Fiyatı",
+                    visible:false,
+                    field:"listPrice",
+                    width:170,
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Satış fiyatı",
+                    visible:false,
+                    field:"salePrice",
+                    width:170,
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  //{title:"Kargo Şirket Id",visible:true, field:"cargoCompanyId", sorter:"string",headerFilter:"input",headerTooltip:true},
+                  //{title:"Kargo Id",visible:true, field:"attributes.name", sorter:"string",headerFilter:"input",headerTooltip:true},
+
+                  {
+                    title:"Kdv Oranı",
+                    visible:false,
+                    field:"vatRate",
+                    width:170,
+                    sorter:"string",
+                    headerFilter:"input",
+                    headerTooltip:true,
+                    editor: true,
+                  },
+
+                  {
+                    title:"Güncelle" ,
+                    field:"Güncelle",
+                    sortable:false,
+                    width:150,
+                    // formatter:updateIcon,
+                    // cellClick:function(e, row){
+                    //       //e - the click event object
+                    //       //cell - cell component
+                    //       document.getElementById("barcode").value = row.getData().barcode;
 
 
-
-new Vue({
-  el: '#example-table',
-  data() {
-      return {
-          dados: [{
-            barcode: 'Test',
-            title: 'Test',
-            brandId: 'Test',
-            productMainId: 'Test',
-            productCode: 'Test',
-            categoryName: 'Test',
-            description: 'Test',
-            quantity: 'Test',
-            stockCode: 'Test',
-            approved: 'Test',
-            salePrice: 'Test',
-            dimensionalWeight: 'Test',
-            currencyType: 'Test',
-            listPrice: 'Test',
-            salePrice: 'Test',
-            vatRate: 'Test',
-            Güncelle: 'Test',
-
-          }],
-          options: {
-              columns: [{
-
-                  title:"ID",
-                  field:"id",
-                  formatter:"rownum",
-                  sorter:"number",
-                  width:50,
-                  headerTooltip:true,
-                  editor: true,
-                },
-
-              {
-                title:"Barkod",
-                field:"barcode",
-                sorter:"string",
-                width:170,
-                headerFilter:"input",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Ürün Adı",
-                field:"title",
-                sorter:"string",
-                width:170,
-                tooltip:true ,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                editor: true,
-              },
-              {
-                title:"Marka Id",
-                visible:false,
-                field:"brandId",
-                width:170,
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Ürün Ana Numarası",
-                visible:false,
-                field:"productMainId",
-                width:170,
-                sorter:"string",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Ürün Kodu",
-                field:"productCode",
-                width:170,
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Ürün Adı",
-                field:"title",
-                width:170,
-                sorter:"string",
-                tooltip:true,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                editor: true,
-              },
-
-              {
-                title:"Kategori Adı",
-                field:"categoryName",
-                width:170,
-                sorter:"string",
-                tooltip:true,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                editor: true,
-              },
-
-              {
-                title:"Açıklama",
-                field:"description",
-                width:153,
-                sorter:"string",
-                tooltip:true,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                editor: true,
-              },
-
-              {
-                title:"Stok Adet",
-                field:"quantity",
-                width:150,
-                sorter:"string",
-                tooltip:true,
-                headerTooltip:true,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                editor: true,
-              },
-
-              {
-                title:"Stok Kodu",
-                visible:false,
-                field:"stockCode",
-                width:150,
-                sorter:"string",
-                tooltip:true,
-                headerTooltip:true,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                editor: true,
-              },
-
-              {
-                title:"Onay Durumu",
-                field:"approved",
-                width:150,
-                sorter:"string",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Fiyatı",
-                field:"salePrice",
-                sorter:"number",
-                width:80,
-                tooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"dimensionalWeight",
-                visible:false,
-                field:"dimensionalWeight",
-                width:150,
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Kur tipi",
-                visible:false,
-                field:"currencyType",
-                width:170,
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Liste Fiyatı",
-                visible:false,
-                field:"listPrice",
-                width:170,
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Satış fiyatı",
-                visible:false,
-                field:"salePrice",
-                width:170,
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              //{title:"Kargo Şirket Id",visible:true, field:"cargoCompanyId", sorter:"string",headerFilter:"input",headerTooltip:true},
-              //{title:"Kargo Id",visible:true, field:"attributes.name", sorter:"string",headerFilter:"input",headerTooltip:true},
-
-              {
-                title:"Kdv Oranı",
-                visible:false,
-                field:"vatRate",
-                width:170,
-                sorter:"string",
-                headerFilter:"input",
-                headerTooltip:true,
-                editor: true,
-              },
-
-              {
-                title:"Güncelle" ,
-                field:"Güncelle",
-                sortable:false,
-                width:150,
-                // formatter:updateIcon,
-                // cellClick:function(e, row){
-                //       //e - the click event object
-                //       //cell - cell component
-                //       document.getElementById("barcode").value = row.getData().barcode;
+                    //       var modal = document.getElementById("myModal");
+                    //       var btn = document.getElementById("myBtn");
+                    //       var span = document.getElementsByClassName("close")[0];
+                    //       //  modal.style.display = "block";
+                    //       span.onclick = function() {
+                    //       modal.style.display = "none";
+                    //       }
 
 
-                //       var modal = document.getElementById("myModal");
-                //       var btn = document.getElementById("myBtn");
-                //       var span = document.getElementsByClassName("close")[0];
-                //       //  modal.style.display = "block";
-                //       span.onclick = function() {
-                //       modal.style.display = "none";
-                //       }
-
-
-                //       // window.alert("clickedd" +  cell.getData.salePrice);
-                //       },
-              },
-            ],
+                    //       // window.alert("clickedd" +  cell.getData.salePrice);
+                    //       },
+                  },
+                ],
+              }
           }
       }
+    });
   }
-});
+}());
+
 
 
 

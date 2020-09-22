@@ -302,162 +302,163 @@
 
 // }
 
-new Vue({
-  el: '#example-table',
-  data() {
-      return {
-          dados: [{
-              productId: 'Test',
-              productSellerCode: 'Test',
-              title: 'Test',
-              subtitle: 'Test',
-              price: 'Test',
-              quantity: 'Test',
-              approvalStatus: 'Test',
-              currencyType: 'Test',
-              id: 'Test',
-              discount_type: 'Test',
-              discount_value: 'Test',
-              Sil: 'Test',
 
-          }],
-          options: {
-              columns: [{
+(async function loadData() {
+  let url = 'http://51.68.195.202:8080/ws_iltech_n11/ws/getproductsn11';
+  let response = await fetch(url);
+  let commits = await response.json(); // читаем ответ в формате JSON
+  let get_smth = commits;
+  let obj = get_smth.product;
+  console.log(obj);
+  if(obj.length != 0){
+    var vm = new Vue({
+      el: '#example-table',
 
-                  formatter:"rownum" ,
-                  sorter:"number",
-                  width:50,
-                  headerTooltip:true,
-                  title:"ID",
-                  field:"row_id",
-                  editor: true,
-                },
+      data() {
+          return {
 
-              {
-                title:"Ürün Id",
-                field:"productId" ,
-                width: 190,
-                editor: true,
-                sorter:"number",
-                headerTooltip:true,
+              dados: obj,
+              options: {
+                  columns: [{
+
+                      formatter:"rownum" ,
+                      sorter:"number",
+                      width:50,
+                      headerTooltip:true,
+                      title:"ID",
+                      field:"row_id",
+                      editor: true,
+                    },
+
+                  {
+                    title:"Ürün Id",
+                    field:"productId" ,
+                    width: 190,
+                    editor: true,
+                    sorter:"number",
+                    headerTooltip:true,
+                  },
+
+                  {
+                    title:"Ürün Satış Kodu",
+                    field:"productSellerCode",
+                    width: 190,
+                    editor: true,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                    sorter:"string",
+                    tooltip:true,
+                    headerTooltip:true,
+                  },
+                  {
+                    title:"Başlık",
+                    field:"title",
+                    sorter: 'string',
+                    width: 190,
+                    editor: true,
+                    tooltip:true ,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                  },
+
+                  {
+                    title:"Altbaşlık",
+                    field:"subtitle",
+                    sorter: 'string',
+                    width: 173,
+                    editor: true,
+                    tooltip:true,
+                    headerFilter:"input",
+                    headerFilterPlaceholder:"ara",
+                  },
+
+                  {
+                    title:"Fiyat",
+                    field:"price",
+                    editor: true,
+                    sorter:"number",
+                    width:140,
+                    tooltip:true,
+                  },
+
+                  {
+                    title:"Stok Adet",
+                    field:"quantity",
+                    sorter: 'string',
+                    width: 170,
+                    editor: true,
+                    tooltip:true,
+                  },
+
+                  {
+                    title:"Onay Durumu",
+                    field:"approvalStatus",
+                    sorter: 'string',
+                    editor: true,
+                    width:140,
+                    headerTooltip:true,
+                  },
+
+                  {
+                    title:"Kur Tipi",
+                    field:"currencyType",
+                    sorter: 'string',
+                    width: 170,
+                    editor: true,
+                    visible:false,
+                    headerTooltip:true,
+                  },
+
+                  {
+                    title:"Stok Id",
+                    field:"id",
+                    sorter: 'string',
+                    width: 170,
+                    editor: true,
+                    headerTooltip:true
+                  },
+
+                  {
+                    title:"Indirim Tipi",
+                    field:"discount_type",
+                    sorter: 'string',
+                    width: 170,
+                    editor: true,
+                    visible:false,
+                    headerTooltip:true
+                  },
+
+                  {
+                    title:"Indirim Degeri",
+                    field:"discount_value",
+                    sorter: 'string',
+                    width: 170,
+                    editor: true,
+                    visible:false,
+                    headerTooltip:true,
+                  },
+
+                  {
+                    title:"Sil" ,
+                    field:"discount_value",
+                    sorter: 'string',
+                    width: 170,
+                    editor: true,
+                    sortable:false,
+                    //formatter:deleteIcon,
+                    // cellClick:function(e, row){
+                    //     delProduct1(row.getData().productId);
+                    // },
+                  }
+                ],
               },
-
-              {
-                title:"Ürün Satış Kodu",
-                field:"productSellerCode",
-                width: 190,
-                editor: true,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-                sorter:"string",
-                tooltip:true,
-                headerTooltip:true,
-              },
-              {
-                title:"Başlık",
-                field:"title",
-                sorter: 'string',
-                width: 190,
-                editor: true,
-                tooltip:true ,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-              },
-
-              {
-                title:"Altbaşlık",
-                field:"subtitle",
-                sorter: 'string',
-                width: 173,
-                editor: true,
-                tooltip:true,
-                headerFilter:"input",
-                headerFilterPlaceholder:"ara",
-              },
-
-              {
-                title:"Fiyat",
-                field:"price",
-                editor: true,
-                sorter:"number",
-                width:140,
-                tooltip:true,
-              },
-
-              {
-                title:"Stok Adet",
-                field:"quantity",
-                sorter: 'string',
-                width: 170,
-                editor: true,
-                tooltip:true,
-              },
-
-              {
-                title:"Onay Durumu",
-                field:"approvalStatus",
-                sorter: 'string',
-                editor: true,
-                width:140,
-                headerTooltip:true,
-              },
-
-              {
-                title:"Kur Tipi",
-                field:"currencyType",
-                sorter: 'string',
-                width: 170,
-                editor: true,
-                visible:false,
-                headerTooltip:true,
-              },
-
-              {
-                title:"Stok Id",
-                field:"id",
-                sorter: 'string',
-                width: 170,
-                editor: true,
-                headerTooltip:true
-              },
-
-              {
-                title:"Indirim Tipi",
-                field:"discount_type",
-                sorter: 'string',
-                width: 170,
-                editor: true,
-                visible:false,
-                headerTooltip:true
-              },
-
-              {
-                title:"Indirim Degeri",
-                field:"discount_value",
-                sorter: 'string',
-                width: 170,
-                editor: true,
-                visible:false,
-                headerTooltip:true,
-              },
-
-              {
-                title:"Sil" ,
-                field:"discount_value",
-                sorter: 'string',
-                width: 170,
-                editor: true,
-                sortable:false,
-                //formatter:deleteIcon,
-                // cellClick:function(e, row){
-                //     delProduct1(row.getData().productId);
-                // },
-              }
-            ],
           }
-      }
+      },
+
+    });
   }
-});
+}());
+
 
 
 
