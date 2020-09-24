@@ -24,7 +24,7 @@
 
 .tab button {
   background-color: #FFFFFF;
-  color: #434349;
+  color: #646C9A;
   float: left;
   border: none;
   outline: none;
@@ -444,8 +444,7 @@ font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-
-  color: #434349;
+  color: #5D8DFE;
 }
 
 .tabcontent input{
@@ -454,6 +453,7 @@ font-family: Roboto;
   border: 1px solid #E2E5EC;
   box-sizing: border-box;
   border-radius: 4px;
+  color: #646C9A;
 }
 
 .tabcontent1 input{
@@ -462,6 +462,7 @@ height: 40px;
 border: 1px solid #E2E5EC;
 box-sizing: border-box;
 border-radius: 4px;
+color: #646C9A;
 }
 
 .tabcontent2 input{
@@ -470,6 +471,7 @@ height: 40px;
 border: 1px solid #E2E5EC;
 box-sizing: border-box;
 border-radius: 4px;
+color: #646C9A;
 }
 
 #notinput_text {
@@ -479,10 +481,15 @@ font-weight: 500;
 font-size: 16px;
 line-height: 24px;
 
-color: #434349;
+color: #646C9A;
 margin-top: 32px;
 margin-bottom: 10px;
 }
+
+#Address1 {
+  color: #646C9A;
+}
+
 
 #card1{
 position: absolute;
@@ -1050,14 +1057,14 @@ margin-top: -125px;
 
 #button1{
 position: absolute;
-margin-top: -120px;
+margin-top: 120px;
 top: 775px;
 left: 50%;
 width: 164px;
 height: 50px;
 background: #3758FF;
 border-radius: 4px;
-
+border: 1px solid #3758FF;
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
@@ -1066,6 +1073,8 @@ line-height: 24px;
 color: #FFFFFF;
 
 }
+
+
 
 @media (max-width: 1650px) {
 #user_informations {
